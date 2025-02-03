@@ -6,7 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-public abstract class BaseTest {
+public abstract class BaseTest{
 
     protected WebDriver driver;
 
@@ -20,5 +20,10 @@ public abstract class BaseTest {
     @AfterMethod
     public void tearDown(){
         driver.quit();
+    }
+
+    public String getTestCaseId(){
+        
+        return null;
     }
 }

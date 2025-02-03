@@ -1,4 +1,4 @@
-package com.swaglab.data;
+package com.swaglab.data.login;
 
 import lombok.Data;
 import lombok.ToString;
