@@ -17,7 +17,7 @@ public class LoginTests extends BaseTest{
         LoginTestData testData = ExcelUtil.getRowIntoPojo(testDataFilePath, 
             LoginTestData.class, "TestCaseId", "LOGIN01");
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.loginNormalUser(testData.getUser()); 
+        loginPage.loginNormalUser(testData.getUser());
     }
 
     @Test

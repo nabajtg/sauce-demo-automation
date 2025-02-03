@@ -2,6 +2,7 @@ package com.swaglab.utils;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -16,16 +17,8 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import lombok.Cleanup;
+import lombok.Data;
 import lombok.ToString;
-
-@ToString
-class TestData {
-
-    public String testCaseId;
-    public String user;
-    public String error;
-
-}
 
 public class ExcelUtil {
 
@@ -141,9 +134,14 @@ public class ExcelUtil {
             T object = pojoClass.getDeclaredConstructor().newInstance();
             Arrays.asList(pojoClass.getDeclaredFields()).forEach(field -> {
                 try {
-                    field.set(object, dataMap.getOrDefault(field.getName().toUpperCase(), null));
+                    String fieldName = field.getName();
+                    String methodName = "set" + fieldName.replaceFirst( (fieldName.charAt(0)+""), 
+                        (fieldName.charAt(0)+"").toUpperCase());
+                    Method seterMethod = pojoClass.getDeclaredMethod(methodName, String.class);
+                    seterMethod.invoke(object, dataMap.getOrDefault(field.getName().toUpperCase(), null));
+                    // field.set(object, dataMap.getOrDefault(field.getName().toUpperCase(), null));
                 } catch (Exception e) {
-                    e.printStackTrace();
+                    System.out.println("Setter Method not found for field: " + field.getName());
                 }
             });
             return object;
@@ -151,15 +149,6 @@ public class ExcelUtil {
             e.printStackTrace();
             return null;
         }
-    }
-
-    public static void main(String[] args) {
-        // readFile();
-        String filePath = "/home/nabajtg/automation-projects/swag-lab-automation/src/main/java/com/swaglab/data/LoginTestData.xlsx";
-        System.out.println(
-            getRowIntoPojo(filePath, TestData.class, "TestCaseId", "LOGIN03")
-        );
-        
     }
 
 }

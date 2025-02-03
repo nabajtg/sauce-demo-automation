@@ -5,7 +5,7 @@ import lombok.ToString;
 
 @Data @ToString
 public class LoginTestData {
-    public String testCaseId;
-    public String user;
-    public String error;
+    private String testCaseId;
+    private String user;
+    private String error;
 }
