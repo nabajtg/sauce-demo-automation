@@ -33,7 +33,7 @@ public class LoginPage extends BasePage{
     @FindBy(id = "login_credentials")
     private WebElement loginCredsBox;
 
-    private By loginErrorMessage = By.cssSelector("h3[data-test='error']");
+    private By loginErrorMessage = By.cssSelector("h3[data-test='error']"); 
 
     public HomePage loginNormalUser(String userType){
         performLogin(userType);
