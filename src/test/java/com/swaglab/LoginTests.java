@@ -1,6 +1,5 @@
 package com.swaglab;
 
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.swaglab.Constants.FilePaths;
@@ -16,7 +15,7 @@ public class LoginTests extends BaseTest{
         LoginTestData testData = ExcelUtil.getRowIntoPojo(FilePaths.LOGIN_TEST_DATA, 
             LoginTestData.class, "TestCaseId", testCaseId);
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.loginNormalUser(testData.getUser());
+        loginPage.loginExpectingSuccess(testData.getUser());
     }
 
     @Test
@@ -26,7 +25,9 @@ public class LoginTests extends BaseTest{
         LoginPage loginPage = new LoginPage(driver);
         loginPage.loginExpectingError(testData.getUser());
         
-        Assert.assertEquals(loginPage.getLoginErrorMessage(), testData.getError()); 
+        assertUtil.assertEquals(loginPage.getLoginErrorMessage(), testData.getError(),
+                "Login Error Message"); 
+       
     }
 
     @Test
@@ -36,7 +37,24 @@ public class LoginTests extends BaseTest{
         LoginPage loginPage = new LoginPage(driver);
         loginPage.loginExpectingError(testData.getUser());
         
-        Assert.assertEquals(loginPage.getLoginErrorMessage(), testData.getError()); 
+        assertUtil.assertEquals(loginPage.getLoginErrorMessage(), testData.getError(),
+                "Login Error Message");  
+    }
+
+    @Test
+    public void LOGIN04_testValidLogin(){
+        LoginTestData testData = ExcelUtil.getRowIntoPojo(FilePaths.LOGIN_TEST_DATA, 
+            LoginTestData.class, "TestCaseId", testCaseId);
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.loginExpectingSuccess(testData.getUser());
+    }
+
+    @Test
+    public void LOGIN05_testValidLogin(){
+        LoginTestData testData = ExcelUtil.getRowIntoPojo(FilePaths.LOGIN_TEST_DATA, 
+            LoginTestData.class, "TestCaseId", testCaseId);
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.loginExpectingSuccess(testData.getUser());
     }
 
 

@@ -13,6 +13,9 @@ import org.openqa.selenium.support.PageFactory;
 import com.swaglab.enums.LoginCredentials;
 import com.swaglab.pages.base.BasePage;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 public class LoginPage extends BasePage{
     private final WebDriver driver;
 
@@ -36,25 +39,30 @@ public class LoginPage extends BasePage{
 
     private By loginErrorMessage = By.cssSelector("h3[data-test='error']"); 
 
-    public HomePage loginNormalUser(String userType){
+    public HomePage loginExpectingSuccess(String userType){
+        log.info("Login expecting success : START");
         performLogin(userType);
         return new HomePage(driver);
     }
 
     public LoginPage loginExpectingError(String userType){
+        log.info("Login expecting error : START");
         performLogin(userType);
         return this;
     }
 
     public void performLogin(String userType){
         LoginCredentials creds = LoginCredentials.get(userType);
+        log.info("Login User: " + creds.getUsername());
         userNameInput.sendKeys(creds.getUsername());
         passwordInput.sendKeys(creds.getPassword());
         loginButton.submit();
     }
 
     public String getLoginErrorMessage(){
-        return driver.findElement(loginErrorMessage).getText();
+        String errorMessage = driver.findElement(loginErrorMessage).getText();
+        log.info("Error Message displayed: " + errorMessage);
+        return errorMessage;
     }
 
     public Map<String, String> getLoginCreds(){

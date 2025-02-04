@@ -8,11 +8,14 @@ import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
+import com.swaglab.utils.AssertUtil;
+
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public abstract class BaseTest{
 
+    protected AssertUtil assertUtil = new AssertUtil();
     protected WebDriver driver;
     protected String testCaseId;
 
@@ -23,11 +26,12 @@ public abstract class BaseTest{
 
         driver = new ChromeDriver();
         driver.get("https://www.saucedemo.com/");
-        Assert.assertEquals(driver.getTitle(), "Swag Labs");
+        assertUtil.assertEquals(driver.getTitle(), "Swag Labs", "Page Title");
     }
 
     @AfterMethod
     public void tearDown(){
+        assertUtil.assertAll(testCaseId);
         driver.quit();
     }
 }

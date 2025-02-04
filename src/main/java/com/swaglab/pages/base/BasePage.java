@@ -3,7 +3,11 @@ package com.swaglab.pages.base;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import com.swaglab.utils.AssertUtil;
+
 public abstract class BasePage {
+    
+    protected AssertUtil assertUtil = new AssertUtil();
     protected WebDriver driver;
 
     public BasePage(WebDriver driver){
