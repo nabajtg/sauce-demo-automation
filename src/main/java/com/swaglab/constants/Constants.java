@@ -1,4 +1,4 @@
-package com.swaglab;
+package com.swaglab.constants;
 
 public class Constants {
 

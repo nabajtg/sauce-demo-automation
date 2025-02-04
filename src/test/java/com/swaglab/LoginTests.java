@@ -2,8 +2,8 @@ package com.swaglab;
 
 import org.testng.annotations.Test;
 
-import com.swaglab.Constants.FilePaths;
 import com.swaglab.base.BaseTest;
+import com.swaglab.constants.Constants.FilePaths;
 import com.swaglab.data.login.LoginTestData;
 import com.swaglab.pages.LoginPage;
 import com.swaglab.utils.ExcelUtil;
