@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.swaglab.enums.LoginCredentials;
 import com.swaglab.pages.base.BasePage;
 
 public class LoginPage extends BasePage{
@@ -46,12 +47,9 @@ public class LoginPage extends BasePage{
     }
 
     public void performLogin(String userType){
-        Map<String, String> creds = getLoginCreds();
-        String username = creds.getOrDefault(userType, "invalid_user");
-        String password = "secret_sauce";
-        
-        userNameInput.sendKeys(username);
-        passwordInput.sendKeys(password);
+        LoginCredentials creds = LoginCredentials.get(userType);
+        userNameInput.sendKeys(creds.getUsername());
+        passwordInput.sendKeys(creds.getPassword());
         loginButton.submit();
     }
 

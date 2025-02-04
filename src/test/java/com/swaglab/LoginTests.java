@@ -3,6 +3,7 @@ package com.swaglab;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.swaglab.Constants.FilePaths;
 import com.swaglab.base.BaseTest;
 import com.swaglab.data.login.LoginTestData;
 import com.swaglab.pages.LoginPage;
@@ -10,20 +11,18 @@ import com.swaglab.utils.ExcelUtil;
 
 public class LoginTests extends BaseTest{
 
-    private static final String testDataFilePath = "/home/nabajtg/automation-projects/swag-lab-automation/src/main/java/com/swaglab/data/login/LoginTestData.xlsx"; 
-
     @Test
-    public void testValidLogin(){
-        LoginTestData testData = ExcelUtil.getRowIntoPojo(testDataFilePath, 
-            LoginTestData.class, "TestCaseId", "LOGIN01");
+    public void LOGIN01_testValidLogin(){
+        LoginTestData testData = ExcelUtil.getRowIntoPojo(FilePaths.LOGIN_TEST_DATA, 
+            LoginTestData.class, "TestCaseId", testCaseId);
         LoginPage loginPage = new LoginPage(driver);
         loginPage.loginNormalUser(testData.getUser());
     }
 
     @Test
-    public void testInvalidLogin(){
-        LoginTestData testData = ExcelUtil.getRowIntoPojo(testDataFilePath, 
-            LoginTestData.class, "TestCaseId", "LOGIN02");
+    public void LOGIN02_testInvalidLogin(){
+        LoginTestData testData = ExcelUtil.getRowIntoPojo(FilePaths.LOGIN_TEST_DATA, 
+            LoginTestData.class, "TestCaseId", testCaseId);
         LoginPage loginPage = new LoginPage(driver);
         loginPage.loginExpectingError(testData.getUser());
         
@@ -31,9 +30,9 @@ public class LoginTests extends BaseTest{
     }
 
     @Test
-    public void testLockedUserLogin(){
-        LoginTestData testData = ExcelUtil.getRowIntoPojo(testDataFilePath, 
-            LoginTestData.class, "TestCaseId", "LOGIN03");
+    public void LOGIN03_testLockedUserLogin(){
+        LoginTestData testData = ExcelUtil.getRowIntoPojo(FilePaths.LOGIN_TEST_DATA, 
+            LoginTestData.class, "TestCaseId", testCaseId);
         LoginPage loginPage = new LoginPage(driver);
         loginPage.loginExpectingError(testData.getUser());
         
