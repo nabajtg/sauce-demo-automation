@@ -1,4 +1,4 @@
-package com.swaglab.base;
+package com.swaglab.tests.base;
 
 import java.lang.reflect.Method;
 import java.time.Duration;

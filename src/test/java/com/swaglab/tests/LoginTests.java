@@ -1,12 +1,12 @@
-package com.swaglab;
+package com.swaglab.tests;
 
 import org.testng.annotations.Test;
 
-import com.swaglab.base.BaseTest;
 import com.swaglab.constants.Constants.FilePaths;
 import com.swaglab.data.login.LoginTestData;
 import com.swaglab.pages.HomePage;
 import com.swaglab.pages.LoginPage;
+import com.swaglab.tests.base.BaseTest;
 import com.swaglab.utils.ExcelUtil;
 
 public class LoginTests extends BaseTest{
