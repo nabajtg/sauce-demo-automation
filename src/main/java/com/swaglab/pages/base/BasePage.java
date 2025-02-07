@@ -1,17 +1,47 @@
 package com.swaglab.pages.base;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
-import com.swaglab.utils.AssertUtil;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public abstract class BasePage {
-    
-    protected AssertUtil assertUtil = new AssertUtil();
+
     protected WebDriver driver;
 
     public BasePage(WebDriver driver){
         this.driver = driver;
+    }
+
+    public void enterText(By element, String text){
+        try {
+            driver.findElement(element).sendKeys(text);
+        } catch (Exception e) {
+            System.err.println("Unable to enter text in element : " + element);
+            e.printStackTrace();
+        }
+    }
+
+    public void click(By element){
+        try {
+            driver.findElement(element).click();
+        } catch (Exception e) {
+            System.err.println("Unable to click element : " + element);
+            e.printStackTrace();
+        }
+    }
+
+    public void click(WebElement element){
+        try {
+            element.click();
+        } catch (Exception e) {
+            System.err.println("Unable to click element : " + element);
+            e.printStackTrace();
+        }
     }
 
     public String getText(By element){
@@ -19,6 +49,27 @@ public abstract class BasePage {
             return driver.findElement(element).getText();            
         } catch (Exception e) {
             System.err.println("Unable to get text for : " + element);
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public String getText(WebElement element){
+        try {
+            return element.getText();            
+        } catch (Exception e) {
+            System.err.println("Unable to get text for : " + element);
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public WebElement waitForElement(By element, Duration timeout){
+        try {
+            Wait<WebDriver> wait = new WebDriverWait(driver, timeout);
+            return wait.until(ExpectedConditions.visibilityOfElementLocated(element));
+        } catch (Exception e) {
+            System.err.println("Exceptions occured while waiting for element : " + element);
             e.printStackTrace();
             return null;
         }

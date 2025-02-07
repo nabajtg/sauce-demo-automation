@@ -60,8 +60,7 @@ public class LoginPage extends BasePage{
     }
 
     public String getLoginErrorMessage(){
-        String errorMessage = driver.findElement(loginErrorMessage).getText();
-        return errorMessage;
+        return getText(loginErrorMessage);
     }
 
     public Map<String, String> getLoginCreds(){
