@@ -40,20 +40,20 @@ public class LoginPage extends BasePage{
     private By loginErrorMessage = By.cssSelector("h3[data-test='error']"); 
 
     public HomePage loginExpectingSuccess(String userType){
-        log.info("Login expecting success : START");
+        System.out.println("Login expecting success : START");
         performLogin(userType);
         return new HomePage(driver);
     }
 
     public LoginPage loginExpectingError(String userType){
-        log.info("Login expecting error : START");
+        System.out.println("Login expecting error : START");
         performLogin(userType);
         return this;
     }
 
     public void performLogin(String userType){
         LoginCredentials creds = LoginCredentials.get(userType);
-        log.info("Login User: " + creds.getUsername());
+        System.out.println("Login User: " + creds.getUsername());
         userNameInput.sendKeys(creds.getUsername());
         passwordInput.sendKeys(creds.getPassword());
         loginButton.submit();
@@ -61,7 +61,6 @@ public class LoginPage extends BasePage{
 
     public String getLoginErrorMessage(){
         String errorMessage = driver.findElement(loginErrorMessage).getText();
-        log.info("Error Message displayed: " + errorMessage);
         return errorMessage;
     }
 

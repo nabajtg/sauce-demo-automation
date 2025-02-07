@@ -2,24 +2,20 @@ package com.swaglab.pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 
 import com.swaglab.pages.base.BasePage;
-import com.swaglab.utils.AssertUtil;
+
+import lombok.Getter;
 
 public class HomePage extends BasePage{
     
     private final WebDriver driver;
-    private AssertUtil assertUtil = new AssertUtil();
+    private @Getter String currentUrl;;
 
     public HomePage(WebDriver driver){
         super(driver);
         this.driver = driver;
-
-        assertUtil.assertEquals(driver.getCurrentUrl(), 
-            "https://www.saucedemo.com/inventory.html", "Home Page Url");
-        assertUtil.assertAll("Home Page");
-        
+        this.currentUrl = driver.getCurrentUrl();
         PageFactory.initElements(driver, this);
     }
 

@@ -2,7 +2,7 @@ package com.swaglab.utils;
 
 import org.testng.asserts.SoftAssert;
 
-import lombok.extern.slf4j.Slf4j;
+import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,13 +11,12 @@ import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.asserts.IAssert;
 
-@Slf4j
 public class AssertUtil extends SoftAssert {
-	private List<String> results = new ArrayList<String>();
+	@Setter private List<String> results;
 	private enum Status {
 		PASSED, FAILED
 		};
-    
+
 	@Override
     public void onAssertFailure(IAssert<?> assertCommand, AssertionError ex) {
 		ITestResult result = Reporter.getCurrentTestResult();
@@ -42,7 +41,7 @@ public class AssertUtil extends SoftAssert {
     		if(res.contains(Status.PASSED.toString())) {
     			System.out.println(res);
     		}else {
-    			System.out.println(res);
+    			System.err.println(res);
     		}
     		
     	});
