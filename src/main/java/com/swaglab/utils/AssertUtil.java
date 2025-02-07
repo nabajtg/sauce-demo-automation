@@ -3,8 +3,6 @@ package com.swaglab.utils;
 import org.testng.asserts.SoftAssert;
 
 import lombok.Setter;
-
-import java.util.ArrayList;
 import java.util.List;
 
 import org.testng.ITestResult;
