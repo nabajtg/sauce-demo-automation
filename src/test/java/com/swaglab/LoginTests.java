@@ -12,7 +12,7 @@ import com.swaglab.utils.ExcelUtil;
 public class LoginTests extends BaseTest{
 
     @Test
-    public void LOGIN01_testStanddardUserogin(){
+    public void LOGIN01_testStandardUserogin(){
         LoginTestData testData = ExcelUtil.getRowIntoPojo(FilePaths.LOGIN_TEST_DATA, 
             LoginTestData.class, "TestCaseId", testCaseId);
         LoginPage loginPage = new LoginPage(driver);
