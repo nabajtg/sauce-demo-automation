@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -41,6 +42,28 @@ public abstract class BasePage {
         } catch (Exception e) {
             System.err.println("Unable to click element : " + element);
             e.printStackTrace();
+        }
+    }
+
+    public void selectOptionFromDropdown(By selectElementBy, String option){
+        try {
+            WebElement selectElement = driver.findElement(selectElementBy);
+            Select select = new Select(selectElement);
+            select.selectByValue(option);
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.err.println("Unable to select option: " + option + " from " + selectElementBy);
+        }
+        
+    }
+
+    public void selectOptionFromDropdown(WebElement selectElement, String option){
+        try {
+            Select select = new Select(selectElement);
+            select.selectByValue(option);
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.err.println("Unable to select option: " + option + " from " + selectElement);
         }
     }
 

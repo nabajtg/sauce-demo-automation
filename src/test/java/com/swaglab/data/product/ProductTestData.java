@@ -1,5 +1,11 @@
 package com.swaglab.data.product;
 
-public class ProductTestData {
+import lombok.Data;
+import lombok.ToString;
 
+@Data @ToString
+public class ProductTestData {
+    private String testCaseId;
+    private String user;
+    private String displayOrder;
 }

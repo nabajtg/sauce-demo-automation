@@ -12,11 +12,13 @@ import org.testng.annotations.BeforeMethod;
 import com.swaglab.constants.Constants;
 import com.swaglab.utils.AssertUtil;
 
+import lombok.Getter;
+
 public abstract class BaseTest{
 
     protected AssertUtil assertUtil = new AssertUtil();
     protected WebDriver driver;
-    protected String testCaseId;
+    @Getter protected String testCaseId;
 
     @BeforeMethod
     public void initializeBrowser(Method method){

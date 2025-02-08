@@ -7,7 +7,7 @@ public class Constants {
     
     public class FilePaths{
         public static final String LOGIN_TEST_DATA = "/src/test/java/com/swaglab/data/login/LoginTestData.xlsx";  
-        // public static final String LOGIN_TEST_DATA = "/src/test/java/com/swaglab/data/login/LoginTestData.xlsx";  
+        public static final String PRODUCT_TEST_DATA = "/src/test/java/com/swaglab/data/product/ProductTestData.xlsx";  
     }
 
 }
