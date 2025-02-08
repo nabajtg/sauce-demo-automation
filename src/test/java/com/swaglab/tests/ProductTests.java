@@ -2,10 +2,10 @@ package com.swaglab.tests;
 
 import org.testng.annotations.Test;
 
-public class HomePageTests {
+public class ProductTests {
 
     @Test
-    public void PRODUCT001_testProductsDisplayedInAscendingOrderByName(){
+    public void PRODUCT001_testProductsDisplayedInAscendingOrderByNameForStandardUser(){
         
     }
 

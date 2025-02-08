@@ -16,6 +16,9 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+import com.swaglab.constants.Constants;
+import com.swaglab.constants.Constants.FilePaths;
+
 import lombok.Cleanup;
 
 public class ExcelUtil {
@@ -93,7 +96,8 @@ public class ExcelUtil {
     private static XSSFSheet getFirstSheet(String filePath){
         try {
             @Cleanup 
-            FileInputStream excelFile = new FileInputStream(new File(filePath));
+            FileInputStream excelFile = new FileInputStream(
+                    new File(System.getProperty("user.dir") + filePath));
             @Cleanup 
             XSSFWorkbook wb = new XSSFWorkbook(excelFile);
             return wb.getSheetAt(0);
