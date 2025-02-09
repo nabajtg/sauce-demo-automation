@@ -10,11 +10,11 @@ import com.swaglab.pages.base.BasePage;
 
 import lombok.Getter;
 
-public class IndividualProductPage extends BasePage{
+public class IndividualItemPage extends BasePage{
     
     private @Getter String currentUrl;
 
-    public IndividualProductPage(WebDriver driver){
+    public IndividualItemPage(WebDriver driver){
         super(driver);
         currentUrl = driver.getCurrentUrl();
         PageFactory.initElements(driver, this);
@@ -29,15 +29,15 @@ public class IndividualProductPage extends BasePage{
     @FindBy(css = ".inventory_details_price")
     private WebElement itemPriceElement;
 
-    public String getProductName(){
+    public String getItemName(){
         return itemNameElement.getText();
     }
 
-    public String getProductDesc(){
+    public String getItemDesc(){
         return itemDescElement.getText();
     }
 
-    public Double getProductPrice(){
+    public Double getItemPrice(){
         return Double.parseDouble(itemPriceElement.getText().replace("$", ""));
     }
 
