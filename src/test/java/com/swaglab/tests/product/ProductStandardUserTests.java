@@ -116,7 +116,7 @@ public class ProductStandardUserTests extends BaseTest{
         assertUtil.assertTrue(individualProductPage.getCurrentUrl().contains(
                                 Constants.INDIVIDUAL_ITEM_PAGE_URL
                             ), 
-                            "Indivitual Page Url is Correct");
+                            "Individual Page Url is Correct");
         assertUtil.assertEquals(individualProductPage.getProductName(), product.getName(),
             "Item Name");
         assertUtil.assertEquals(individualProductPage.getProductDesc(), product.getDescription(),
