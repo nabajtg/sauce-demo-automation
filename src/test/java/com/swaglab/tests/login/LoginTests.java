@@ -1,7 +1,8 @@
-package com.swaglab.tests;
+package com.swaglab.tests.login;
 
 import org.testng.annotations.Test;
 
+import com.swaglab.constants.Constants;
 import com.swaglab.constants.Constants.FilePaths;
 import com.swaglab.data.login.LoginTestData;
 import com.swaglab.pages.HomePage;
@@ -18,7 +19,7 @@ public class LoginTests extends BaseTest{
         LoginPage loginPage = new LoginPage(driver);
         HomePage homePage = loginPage.loginExpectingSuccess(testData.getUser());
         assertUtil.assertEquals(homePage.getCurrentUrl(), 
-            "https://www.saucedemo.com/inventory.html", "Home Page Url");
+            Constants.HOME_PAGE_URL, "Home Page Url");
     }
 
     @Test
@@ -51,7 +52,7 @@ public class LoginTests extends BaseTest{
         LoginPage loginPage = new LoginPage(driver);
         HomePage homePage = loginPage.loginExpectingSuccess(testData.getUser());
         assertUtil.assertEquals(homePage.getCurrentUrl(), 
-            "https://www.saucedemo.com/inventory.html", "Home Page Url");
+            Constants.HOME_PAGE_URL, "Home Page Url");
     }
 
     @Test
@@ -61,7 +62,7 @@ public class LoginTests extends BaseTest{
         LoginPage loginPage = new LoginPage(driver);
         HomePage homePage = loginPage.loginExpectingSuccess(testData.getUser());
         assertUtil.assertEquals(homePage.getCurrentUrl(), 
-            "https://www.saucedemo.com/inventory.html", "Home Page Url");
+            Constants.HOME_PAGE_URL, "Home Page Url");
     }
 
     @Test
@@ -71,7 +72,7 @@ public class LoginTests extends BaseTest{
         LoginPage loginPage = new LoginPage(driver);
         HomePage homePage = loginPage.loginExpectingSuccess(testData.getUser());
         assertUtil.assertEquals(homePage.getCurrentUrl(), 
-            "https://www.saucedemo.com/inventory.html", "Home Page Url");
+            Constants.HOME_PAGE_URL, "Home Page Url");
     }
 
     @Test
@@ -81,7 +82,7 @@ public class LoginTests extends BaseTest{
         LoginPage loginPage = new LoginPage(driver);
         HomePage homePage = loginPage.loginExpectingSuccess(testData.getUser());
         assertUtil.assertEquals(homePage.getCurrentUrl(), 
-            "https://www.saucedemo.com/inventory.html", "Home Page Url");
+            Constants.HOME_PAGE_URL, "Home Page Url");
     }
 
 

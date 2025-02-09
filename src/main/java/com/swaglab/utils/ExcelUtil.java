@@ -79,7 +79,7 @@ public class ExcelUtil {
     private static String getCellValueInString(Cell cell){
         switch (cell.getCellType()) {
             case STRING:
-                return cell.getStringCellValue();
+                return cell.getStringCellValue().trim();
             case NUMERIC:
                 return String.valueOf(cell.getNumericCellValue());
             case BOOLEAN:

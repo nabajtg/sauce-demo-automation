@@ -1,20 +1,23 @@
-package com.swaglab.tests;
+package com.swaglab.tests.product;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
 import org.testng.annotations.Test;
 
+import com.swaglab.constants.Constants;
 import com.swaglab.constants.Constants.FilePaths;
 import com.swaglab.data.product.ProductTestData;
 import com.swaglab.domains.Product;
 import com.swaglab.pages.HomePage;
+import com.swaglab.pages.IndividualProductPage;
 import com.swaglab.pages.LoginPage;
 import com.swaglab.tests.base.BaseTest;
 import com.swaglab.utils.ExcelUtil;
 
-public class ProductTests extends BaseTest{
+public class ProductStandardUserTests extends BaseTest{
 
     @Test
     public void PRODUCT001_testProductsDisplayedInAscendingOrderByNameForStandardUser(){
@@ -35,7 +38,7 @@ public class ProductTests extends BaseTest{
     }
 
     @Test
-    public void PRODUCT002_testProductsDisplayedInDescendingOrderByName(){
+    public void PRODUCT002_testProductsDisplayedInDescendingOrderByNameForStandardUser(){
         ProductTestData testData = ExcelUtil.getRowIntoPojo(FilePaths.PRODUCT_TEST_DATA, 
             ProductTestData.class, "TestCaseId", testCaseId);
         
@@ -96,5 +99,60 @@ public class ProductTests extends BaseTest{
             "Items Displayed in Descending order by Price"
         );
 
+    }
+
+    @Test
+    public void PRODUCT005_testSingleProductDetails(){
+        ProductTestData testData = ExcelUtil.getRowIntoPojo(FilePaths.PRODUCT_TEST_DATA, 
+            ProductTestData.class, "TestCaseId", testCaseId);
+        
+        LoginPage loginPage = new LoginPage(driver);
+        HomePage homePage = loginPage.loginExpectingSuccess(testData.getUser());
+        
+        Product product = homePage.getSingleItemDetails(testData.getProductNames());
+        IndividualProductPage individualProductPage = homePage.goToIndividualProductPage(
+                testData.getProductNames());
+
+        assertUtil.assertTrue(individualProductPage.getCurrentUrl().contains(
+                                Constants.INDIVIDUAL_ITEM_PAGE_URL
+                            ), 
+                            "Indivitual Page Url is Correct");
+        assertUtil.assertEquals(individualProductPage.getProductName(), product.getName(),
+            "Item Name");
+        assertUtil.assertEquals(individualProductPage.getProductDesc(), product.getDescription(),
+            "Item Desc");
+        assertUtil.assertEquals(individualProductPage.getProductPrice(), product.getPrice(),
+            "Item Price");
+    }
+
+    @Test
+    public void PRODUCT006_testMultipleProductDetails(){
+        ProductTestData testData = ExcelUtil.getRowIntoPojo(FilePaths.PRODUCT_TEST_DATA, 
+            ProductTestData.class, "TestCaseId", testCaseId);
+        
+        LoginPage loginPage = new LoginPage(driver);
+        HomePage homePage = loginPage.loginExpectingSuccess(testData.getUser());
+        
+        List<String> productNames = Arrays.asList(testData.getProductNames().split(","));
+        productNames.forEach(productName->{
+            Product product = homePage.getSingleItemDetails(productName);
+            IndividualProductPage individualProductPage = homePage.goToIndividualProductPage(
+                    productName);
+
+            assertUtil.assertTrue(individualProductPage.getCurrentUrl().contains(
+                                    Constants.INDIVIDUAL_ITEM_PAGE_URL
+                                ), 
+                                "Indivitual Page Url is Correct");
+            assertUtil.assertEquals(individualProductPage.getProductName(), product.getName(),
+                "Item Name");
+            assertUtil.assertEquals(individualProductPage.getProductDesc(), 
+                product.getDescription(), "Item Desc");
+            assertUtil.assertEquals(individualProductPage.getProductPrice(), product.getPrice(),
+                "Item Price");
+            
+            individualProductPage.navigateBack();
+        });
+        
+        
     }
 }

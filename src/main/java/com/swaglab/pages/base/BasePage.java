@@ -2,6 +2,7 @@ package com.swaglab.pages.base;
 
 import java.time.Duration;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -18,7 +19,17 @@ public abstract class BasePage {
         this.driver = driver;
     }
 
-    public void enterText(By element, String text){
+    protected WebElement findElement(By byExpression){
+        try {
+            return driver.findElement(byExpression);
+        } catch (Exception e) {
+            System.err.println("Unable to find element : " + byExpression);
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    protected void enterText(By element, String text){
         try {
             driver.findElement(element).sendKeys(text);
         } catch (Exception e) {
@@ -27,8 +38,9 @@ public abstract class BasePage {
         }
     }
 
-    public void click(By element){
+    protected void click(By element){
         try {
+            waiElementToBeClickable(element, Duration.ofSeconds(5));
             driver.findElement(element).click();
         } catch (Exception e) {
             System.err.println("Unable to click element : " + element);
@@ -36,8 +48,9 @@ public abstract class BasePage {
         }
     }
 
-    public void click(WebElement element){
+    protected void click(WebElement element){
         try {
+            waiElementToBeClickable(element, Duration.ofSeconds(5));
             element.click();
         } catch (Exception e) {
             System.err.println("Unable to click element : " + element);
@@ -45,7 +58,7 @@ public abstract class BasePage {
         }
     }
 
-    public void selectOptionFromDropdown(By selectElementBy, String option){
+    protected void selectOptionFromDropdown(By selectElementBy, String option){
         try {
             WebElement selectElement = driver.findElement(selectElementBy);
             Select select = new Select(selectElement);
@@ -57,7 +70,7 @@ public abstract class BasePage {
         
     }
 
-    public void selectOptionFromDropdown(WebElement selectElement, String option){
+    protected void selectOptionFromDropdown(WebElement selectElement, String option){
         try {
             Select select = new Select(selectElement);
             select.selectByValue(option);
@@ -67,7 +80,7 @@ public abstract class BasePage {
         }
     }
 
-    public String getText(By element){
+    protected String getText(By element){
         try {
             return driver.findElement(element).getText();            
         } catch (Exception e) {
@@ -77,7 +90,7 @@ public abstract class BasePage {
         }
     }
 
-    public String getText(WebElement element){
+    protected String getText(WebElement element){
         try {
             return element.getText();            
         } catch (Exception e) {
@@ -87,7 +100,50 @@ public abstract class BasePage {
         }
     }
 
-    public WebElement waitForElement(By element, Duration timeout){
+    protected void navigateBack(String expectedUrl){
+        try {
+            driver.navigate().back();
+            waitForPage(expectedUrl, Duration.ofSeconds(5));
+        } catch (Exception e) {
+            System.err.println("Exceptions occured while navigating back to : " + expectedUrl);
+            e.printStackTrace();
+        }
+    }
+
+    protected Alert waitForAlertVisible(){
+        try {
+            Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+            return wait.until(ExpectedConditions.alertIsPresent());
+        } catch (Exception e) {
+            System.err.println("Alert not found");
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    protected WebElement waiElementToBeClickable(WebElement element, Duration timeout){
+        try {
+            Wait<WebDriver> wait = new WebDriverWait(driver, timeout);
+            return wait.until(ExpectedConditions.elementToBeClickable(element));
+        } catch (Exception e) {
+            System.err.println("Element not clickable : " + element);
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    protected WebElement waiElementToBeClickable(By element, Duration timeout){
+        try {
+            Wait<WebDriver> wait = new WebDriverWait(driver, timeout);
+            return wait.until(ExpectedConditions.elementToBeClickable(element));
+        } catch (Exception e) {
+            System.err.println("Element not clickable : " + element);
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    protected WebElement waitForElement(By element, Duration timeout){
         try {
             Wait<WebDriver> wait = new WebDriverWait(driver, timeout);
             return wait.until(ExpectedConditions.visibilityOfElementLocated(element));
@@ -95,6 +151,17 @@ public abstract class BasePage {
             System.err.println("Exceptions occured while waiting for element : " + element);
             e.printStackTrace();
             return null;
+        }
+    }
+
+    protected boolean waitForPage(String url, Duration timeout){
+        try {
+            Wait<WebDriver> wait = new WebDriverWait(driver, timeout);
+            return wait.until(ExpectedConditions.urlContains(url));
+        } catch (Exception e) {
+            System.err.println("Exceptions occured while waiting for page : " + url);
+            e.printStackTrace();
+            return false;
         }
     }
 
