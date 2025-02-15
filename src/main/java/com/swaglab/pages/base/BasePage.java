@@ -4,6 +4,7 @@ import java.time.Duration;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -162,6 +163,74 @@ public abstract class BasePage {
             System.err.println("Exceptions occured while waiting for page : " + url);
             e.printStackTrace();
             return false;
+        }
+    }
+
+    protected boolean isAlertPresent(){
+        try {
+            driver.switchTo().alert();
+            return true;
+        } catch (NoAlertPresentException e) {
+            return false;
+        }catch(Exception e){
+            System.err.println("Exception occured while checking if alert present");
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    protected Alert getAlert(){
+        try {
+            return driver.switchTo().alert();
+        } catch (Exception e) {
+            System.err.println("Exception occured while getting alert");
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    protected String getAlertText(){
+        try{
+            if(isAlertPresent()){
+                Alert alert = getAlert();
+                return alert.getText();
+            }else{
+                System.err.println("No Alert present");
+                return null;
+            }
+        }catch(Exception e){
+            System.err.println("Unable to get alert text");
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    protected void acceptAlert(){
+        try{
+            if(isAlertPresent()){
+                Alert alert = getAlert();
+                System.out.println("Alert visible: " + alert.getText());
+                alert.accept();
+            }else{
+                System.err.println("Unable to accept alert, No Alert present");
+            }
+        }catch(Exception e){
+            System.err.println("Unable to accept alert");
+            e.printStackTrace();
+        }
+    }
+
+    protected void dismissAlert(){
+        try{
+            if(isAlertPresent()){
+                Alert alert = getAlert();
+                alert.dismiss();
+            }else{
+                System.err.println("Unable to dismiss alert, No Alert present");
+            }
+        }catch(Exception e){
+            System.err.println("Unable to dismiss alert");
+            e.printStackTrace();
         }
     }
 

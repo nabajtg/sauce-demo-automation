@@ -45,6 +45,11 @@ public class HomePage extends BasePage{
     public void selectSortOption(String sortOption){
         selectOptionFromDropdown(sortOptionsSelect, 
             SortOptions.get(sortOption).getSelectValue());
+        
+        if(isAlertPresent()){
+            acceptAlert();
+        }
+        
     }
     
 
@@ -60,11 +65,19 @@ public class HomePage extends BasePage{
     public Item getSingleItemDetails(WebElement itemElement){
         String name = itemElement.findElement(itemNameBy).getText();
         String desc = itemElement.findElement(itemDescBy).getText();
-        String price = itemElement.findElement(itemPriceBy).getText();
+        Double price = 0.0;
+        try {
+            String priceString = itemElement.findElement(itemPriceBy).getText();
+            price = Double.parseDouble(priceString.replace("$", ""));
+        } catch (Exception e) {
+            System.err.println("Not able to read/convert price");
+            e.printStackTrace();
+        }
+
         return Item.builder()
                 .name(name)
                 .description(desc)
-                .price(Double.parseDouble(price.replace("$", "")))
+                .price(price)
                 .build();
     }
 
