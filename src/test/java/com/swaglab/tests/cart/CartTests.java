@@ -139,20 +139,22 @@ public class CartTests extends BaseTest{
         assertUtil.assertEquals(itemsInCart.size(), items.size(),
                 "No Of items in Cart");
         
-        items.forEach(item->{
-            if(itemsInCart.size()>0){
+        if(itemsInCart.size()>0){
+            items.forEach(item->{
+                
                 Item itemInCart = itemsInCart.stream()
-                                    .filter(cartItem-> cartItem.getName().equals(item.getName()))
-                                    .findFirst().get();
+                        .filter(cartItem -> cartItem.getName().equals(item.getName()))
+                        .findFirst().get();
                 assertUtil.assertNotNull(itemInCart, "Item found in Cart");
                 assertUtil.assertEquals(itemInCart.getName(), item.getName(),
-                    "Item Name");
+                        "Item Name");
                 assertUtil.assertEquals(itemInCart.getPrice(), item.getPrice(),
                         "Item Price");
                 assertUtil.assertEquals(itemInCart.getDescription(),
                         item.getDescription(), "Item Description");
-            }
-        });
+                
+            });
+        }
 
         return cartPage;
     }

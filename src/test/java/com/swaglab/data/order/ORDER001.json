@@ -1,0 +1,11 @@
+{
+    "user": "standard_user",
+    "items": [
+        "Sauce Labs Bolt T-Shirt"
+    ],
+    "customerDetails": {
+        "firstName": "Bob",
+        "lastName": "Marley",
+        "postalCode": "12345"
+    }
+}

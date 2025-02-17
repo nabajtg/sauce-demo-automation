@@ -12,9 +12,9 @@ import org.openqa.selenium.support.PageFactory;
 import com.swaglab.domains.Item;
 import com.swaglab.pages.base.BasePage;
 
-public class CartPage extends BasePage{
+public class OrderOverviewPage extends BasePage{
 
-    public CartPage(WebDriver driver) {
+    public OrderOverviewPage(WebDriver driver){
         super(driver);
         PageFactory.initElements(driver, this);
     }
@@ -25,22 +25,50 @@ public class CartPage extends BasePage{
     @FindBy(css = "button#checkout")
     private WebElement checkOutButtonElement;
 
+    @FindBy(css = "div.summary_subtotal_label")
+    private WebElement itemTotaElement;
+
+    @FindBy(css = "div.summary_tax_label")
+    private WebElement taxElement;
+
+    @FindBy(css = "div.summary_total_label")
+    private WebElement totalElement;
+
+    @FindBy(css = "button#finish")
+    private WebElement finishButtonElement;
+
     private By itemNameBy = By.cssSelector(".inventory_item_name");
     private By itemDescBy = By.cssSelector(".inventory_item_desc");
     private By itemPriceBy = By.cssSelector(".inventory_item_price");
     private By itemQuantityBy = By.cssSelector(".cart_quantity");
-    
 
-    public int getNoOfItemsInCart(){
+
+    public OrderConfirmationPage confirmOrder(){
+        click(finishButtonElement);
+        return new OrderConfirmationPage(driver);
+
+    }
+
+    public int getNoOfItems(){
         return cartItemElementList.size();
     }
 
-    public HomePage goBackToHomePage(){
-        navigateBack();
-        return new HomePage(driver);
+    public Double getItemTotalAmount(){
+        String itemTotalText = getText(itemTotaElement);
+        return Double.parseDouble(itemTotalText.replace("Item total: $", ""));
     }
 
-    public List<Item> getItemsInCart(){
+    public Double getTaxAmount(){
+        String taxText = getText(taxElement);
+        return Double.parseDouble(taxText.replace("Tax: $", ""));
+    }
+
+    public Double getTotalAmount(){
+        String totalText = getText(totalElement);
+        return Double.parseDouble(totalText.replace("Total: $", ""));
+    }
+
+    public List<Item> getItems(){
         List<Item> itemsInCart = new ArrayList<>();
         cartItemElementList.forEach(cartItemElement->{
             String name = cartItemElement.findElement(itemNameBy).getText();
@@ -56,10 +84,6 @@ public class CartPage extends BasePage{
         });
         return itemsInCart;
     }
-    
-    public CheckoutPage goToCheckout(){
-        click(checkOutButtonElement);
-        return new CheckoutPage(driver);
-    }
 
+    
 }
