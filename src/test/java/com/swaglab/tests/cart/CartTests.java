@@ -22,20 +22,17 @@ public class CartTests extends BaseTest{
 
     @Test
     public void CART002_testAddingSingleItemToCardFromHomePage(){
-        testAddToCartFeature(testCaseId);
-        
+        testAddToCartFeature(testCaseId);  
     }
 
     @Test
     public void CART003_testAddingSingleItemToCardFromHomePage(){
-        testAddToCartFeature(testCaseId);
-        
+        testAddToCartFeature(testCaseId); 
     }
 
     @Test
     public void CART004_testAddingMultipleItemToCardFromHomePage(){
-        testAddToCartFeature(testCaseId);
-                
+        testAddToCartFeature(testCaseId);            
     }
 
     @Test
