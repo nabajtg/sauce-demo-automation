@@ -17,8 +17,7 @@ public class CartTests extends BaseTest{
 
     @Test
     public void CART001_testAddingSingleItemToCardFromHomePage(){
-        testAddToCartFeature(testCaseId);
-        
+        testAddToCartFeature(testCaseId);  
     }
 
     @Test
