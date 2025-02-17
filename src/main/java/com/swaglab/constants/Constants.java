@@ -9,7 +9,9 @@ public class Constants {
     
     public class FilePaths{
         public static final String LOGIN_TEST_DATA = "/src/test/java/com/swaglab/data/login/LoginTestData.xlsx";  
-        public static final String ITEM_TEST_DATA = "/src/test/java/com/swaglab/data/item/ItemSortingTestData.xlsx";  
+        public static final String ITEM_SORTING_TEST_DATA = "/src/test/java/com/swaglab/data/item/ItemSortingTestData.xlsx";  
+        public static final String ITEM_DETAILS_TEST_DATA = "/src/test/java/com/swaglab/data/item/ItemDetailsTestData.xlsx";  
+        public static final String CART_TEST_DATA = "/src/test/java/com/swaglab/data/cart/";
     }
 
 }

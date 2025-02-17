@@ -40,7 +40,7 @@ public class HomePage extends BasePage{
     private By itemDescBy = By.className("inventory_item_desc");
     private By itemPriceBy = By.className("inventory_item_price");
 
-    private static final String addToCartXpathTemplate = "//div[text()='ITEM_NAME']/parent::a/parent::div/following-sibling::div[@class='pricebar']/button";
+    private static final String addRemoveButtonXpathTemplate = "//div[text()='ITEM_NAME']/parent::a/parent::div/following-sibling::div[@class='pricebar']/button";
 
     public void selectSortOption(String sortOption){
         selectOptionFromDropdown(sortOptionsSelect, 
@@ -103,10 +103,16 @@ public class HomePage extends BasePage{
         return new IndividualItemPage(driver);
     }
 
-    public void clickOnAddToCart(String itemName){
-        String addToCardButtonXpath = addToCartXpathTemplate.replace("ITEM_NAME", itemName);
+    public void clickOnAddRemoveButton(String itemName){
+        String addToCardButtonXpath = addRemoveButtonXpathTemplate.replace("ITEM_NAME", itemName);
         click(By.xpath(addToCardButtonXpath));
         
+    }
+
+    public void removeItemsFromCart(List<String> itemNames){
+        itemNames.forEach(itemName->{
+            clickOnAddRemoveButton(itemName);
+        });
     }
 
     public CartPage goToCart(){

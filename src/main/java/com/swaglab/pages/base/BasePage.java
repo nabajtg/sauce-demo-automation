@@ -59,6 +59,10 @@ public abstract class BasePage {
         }
     }
 
+    protected void navigateBack(){
+        driver.navigate().back();
+    }
+
     protected void selectOptionFromDropdown(By selectElementBy, String option){
         try {
             WebElement selectElement = driver.findElement(selectElementBy);

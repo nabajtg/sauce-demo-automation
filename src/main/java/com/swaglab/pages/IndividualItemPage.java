@@ -38,7 +38,14 @@ public class IndividualItemPage extends BasePage{
     }
 
     public Double getItemPrice(){
-        return Double.parseDouble(itemPriceElement.getText().replace("$", ""));
+        try {
+            return Double.parseDouble(itemPriceElement.getText().replace("$", ""));
+        } catch (Exception e) {
+            System.err.println("Not able to parse price: " + e.getMessage());
+            // e.printStackTrace();
+            return null;
+        }
+        
     }
 
     public void navigateBack() {

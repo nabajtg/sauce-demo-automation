@@ -33,6 +33,11 @@ public class CartPage extends BasePage{
         return cartItemElementList.size();
     }
 
+    public HomePage goBackToHomePage(){
+        navigateBack();
+        return new HomePage(driver);
+    }
+
     public List<Item> getItemsInCart(){
         List<Item> itemsInCart = new ArrayList<>();
         cartItemElementList.forEach(cartItemElement->{
