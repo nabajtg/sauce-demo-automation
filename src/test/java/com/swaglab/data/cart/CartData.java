@@ -2,8 +2,6 @@ package com.swaglab.data.cart;
 
 import java.util.List;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import lombok.Data;
 import lombok.ToString;
 
