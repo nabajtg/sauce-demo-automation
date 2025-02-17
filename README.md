@@ -1,6 +1,6 @@
-SauceDemo Test Automation Project
+#SauceDemo Test Automation Project
 
-Overview
+##Overview
 
 This project is a test automation framework for SauceDemo, developed using Java, Selenium WebDriver, and TestNG. The framework supports data-driven testing, utilizing both Excel and JSON files for test data management.
 
