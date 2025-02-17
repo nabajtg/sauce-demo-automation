@@ -19,98 +19,70 @@ public class ItemSortingOrderTests extends BaseTest{
 
     @Test
     public void SORT001_testItemsDisplayedInAscendingOrderByName(){
-        ItemSortingTestData testData = ExcelUtil.getRowIntoPojo(FilePaths.ITEM_SORTING_TEST_DATA, 
-            ItemSortingTestData.class, "TestCaseId", testCaseId);
-        HomePage homePage = loginAndSelectDisplayOrder(testData);
-        testDisplayOrder(homePage, testData.getDisplayOrder());
+        testDisplayOrder(testCaseId);
     }
+
 
     @Test
     public void SORT002_testItemsDisplayedInAscendingOrderByName(){
-        ItemSortingTestData testData = ExcelUtil.getRowIntoPojo(FilePaths.ITEM_SORTING_TEST_DATA, 
-            ItemSortingTestData.class, "TestCaseId", testCaseId);
-        HomePage homePage = loginAndSelectDisplayOrder(testData);
-        testDisplayOrder(homePage, testData.getDisplayOrder());
+        testDisplayOrder(testCaseId);
     }
 
     @Test
     public void SORT003_testItemsDisplayedInAscendingOrderByName(){
-        ItemSortingTestData testData = ExcelUtil.getRowIntoPojo(FilePaths.ITEM_SORTING_TEST_DATA, 
-            ItemSortingTestData.class, "TestCaseId", testCaseId);
-        HomePage homePage = loginAndSelectDisplayOrder(testData);
-        testDisplayOrder(homePage, testData.getDisplayOrder());
+        testDisplayOrder(testCaseId);
     }
 
     @Test
     public void SORT004_testItemsDisplayedInDescendingOrderByName(){
-        ItemSortingTestData testData = ExcelUtil.getRowIntoPojo(FilePaths.ITEM_SORTING_TEST_DATA, 
-            ItemSortingTestData.class, "TestCaseId", testCaseId);
-        HomePage homePage = loginAndSelectDisplayOrder(testData);
-        testDisplayOrder(homePage, testData.getDisplayOrder());        
+        testDisplayOrder(testCaseId);    
     }
 
     @Test
     public void SORT005_testItemsDisplayedInDescendingOrderByName(){
-        ItemSortingTestData testData = ExcelUtil.getRowIntoPojo(FilePaths.ITEM_SORTING_TEST_DATA, 
-            ItemSortingTestData.class, "TestCaseId", testCaseId);
-        HomePage homePage = loginAndSelectDisplayOrder(testData);
-        testDisplayOrder(homePage, testData.getDisplayOrder());
+        testDisplayOrder(testCaseId);
     }
 
     @Test
     public void SORT006_testItemsDisplayedInDescendingOrderByName(){
-        ItemSortingTestData testData = ExcelUtil.getRowIntoPojo(FilePaths.ITEM_SORTING_TEST_DATA, 
-            ItemSortingTestData.class, "TestCaseId", testCaseId);
-        HomePage homePage = loginAndSelectDisplayOrder(testData);
-        testDisplayOrder(homePage, testData.getDisplayOrder());
+        testDisplayOrder(testCaseId);
     }
 
     @Test
     public void SORT007_testItemsDisplayedInAscendingOrderByPrice(){
-        ItemSortingTestData testData = ExcelUtil.getRowIntoPojo(FilePaths.ITEM_SORTING_TEST_DATA, 
-            ItemSortingTestData.class, "TestCaseId", testCaseId);
-        HomePage homePage = loginAndSelectDisplayOrder(testData);
-        testDisplayOrder(homePage, testData.getDisplayOrder());
+        testDisplayOrder(testCaseId);
     }
 
     @Test
     public void SORT008_testItemsDisplayedInAscendingOrderByPrice(){
-        ItemSortingTestData testData = ExcelUtil.getRowIntoPojo(FilePaths.ITEM_SORTING_TEST_DATA, 
-            ItemSortingTestData.class, "TestCaseId", testCaseId);
-        HomePage homePage = loginAndSelectDisplayOrder(testData);
-        testDisplayOrder(homePage, testData.getDisplayOrder());
+        testDisplayOrder(testCaseId);
     }
 
     @Test
     public void SORT009_testItemsDisplayedInAscendingOrderByPrice(){
-        ItemSortingTestData testData = ExcelUtil.getRowIntoPojo(FilePaths.ITEM_SORTING_TEST_DATA, 
-            ItemSortingTestData.class, "TestCaseId", testCaseId);
-        HomePage homePage = loginAndSelectDisplayOrder(testData);
-        testDisplayOrder(homePage, testData.getDisplayOrder());
+        testDisplayOrder(testCaseId);
     }
 
     @Test
     public void SORT010_testItemsDisplayedInDescendingOrderByPrice(){
-        ItemSortingTestData testData = ExcelUtil.getRowIntoPojo(FilePaths.ITEM_SORTING_TEST_DATA, 
-            ItemSortingTestData.class, "TestCaseId", testCaseId);
-        HomePage homePage = loginAndSelectDisplayOrder(testData);
-        testDisplayOrder(homePage, testData.getDisplayOrder());
+        testDisplayOrder(testCaseId);
     }
 
     @Test
     public void SORT011_testItemsDisplayedInDescendingOrderByPrice(){
-        ItemSortingTestData testData = ExcelUtil.getRowIntoPojo(FilePaths.ITEM_SORTING_TEST_DATA, 
-            ItemSortingTestData.class, "TestCaseId", testCaseId);
-        HomePage homePage = loginAndSelectDisplayOrder(testData);
-        testDisplayOrder(homePage, testData.getDisplayOrder());
+        testDisplayOrder(testCaseId);
     }
 
     @Test
     public void SORT012_testItemsDisplayedInDescendingOrderByPrice(){
+        testDisplayOrder(testCaseId);
+    }
+
+    private void testDisplayOrder(String testCaseId){
         ItemSortingTestData testData = ExcelUtil.getRowIntoPojo(FilePaths.ITEM_SORTING_TEST_DATA, 
             ItemSortingTestData.class, "TestCaseId", testCaseId);
         HomePage homePage = loginAndSelectDisplayOrder(testData);
-        testDisplayOrder(homePage, testData.getDisplayOrder());
+        verifyDisplayOrder(homePage, testData.getDisplayOrder());
     }
 
 
@@ -121,7 +93,7 @@ public class ItemSortingOrderTests extends BaseTest{
         return homePage;
     }
 
-    public void testDisplayOrder(HomePage homePage, String displayOrder){
+    public void verifyDisplayOrder(HomePage homePage, String displayOrder){
         List<Item> items = homePage.getAllItemsDetailsDisplayed();
         assertUtil.assertTrue(items.size()>0, "Items not Empty");
         

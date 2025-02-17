@@ -17,96 +17,97 @@ public class CartTests extends BaseTest{
 
     @Test
     public void CART001_testAddingSingleItemToCardFromHomePage(){
-        CartData cartData = JsonUtil.convertJsonToPojo(
-            JsonUtil.readFile(FilePaths.CART_TEST_DATA + testCaseId), CartData.class);
-        HomePage homePage = loginAndAddToCart(testCaseId);
-        List<Item> items = homePage.getItemDetails(cartData.getItemsToAdd());
-        gotoCartAndVerify(homePage, items);
+        testAddToCartFeature(testCaseId);
         
     }
 
     @Test
     public void CART002_testAddingSingleItemToCardFromHomePage(){
-        CartData cartData = JsonUtil.convertJsonToPojo(
-            JsonUtil.readFile(FilePaths.CART_TEST_DATA + testCaseId), CartData.class);
-        HomePage homePage = loginAndAddToCart(testCaseId);
-        List<Item> items = homePage.getItemDetails(cartData.getItemsToAdd());
-        gotoCartAndVerify(homePage, items);
+        testAddToCartFeature(testCaseId);
         
     }
 
     @Test
     public void CART003_testAddingSingleItemToCardFromHomePage(){
-        CartData cartData = JsonUtil.convertJsonToPojo(
-            JsonUtil.readFile(FilePaths.CART_TEST_DATA + testCaseId), CartData.class);
-        HomePage homePage = loginAndAddToCart(testCaseId);
-        List<Item> items = homePage.getItemDetails(cartData.getItemsToAdd());
-        gotoCartAndVerify(homePage, items);
+        testAddToCartFeature(testCaseId);
         
     }
 
     @Test
     public void CART004_testAddingMultipleItemToCardFromHomePage(){
-        CartData cartData = JsonUtil.convertJsonToPojo(
-            JsonUtil.readFile(FilePaths.CART_TEST_DATA + testCaseId), CartData.class);
-        HomePage homePage = loginAndAddToCart(testCaseId);
-        List<Item> items = homePage.getItemDetails(cartData.getItemsToAdd());
-        gotoCartAndVerify(homePage, items);
+        testAddToCartFeature(testCaseId);
                 
     }
 
     @Test
     public void CART005_testAddingMultipleItemToCardFromHomePage(){
-        CartData cartData = JsonUtil.convertJsonToPojo(
-            JsonUtil.readFile(FilePaths.CART_TEST_DATA + testCaseId), CartData.class);
-        HomePage homePage = loginAndAddToCart(testCaseId);
-        List<Item> items = homePage.getItemDetails(cartData.getItemsToAdd());
-        gotoCartAndVerify(homePage, items);
+        testAddToCartFeature(testCaseId);
                 
     }
 
     @Test
     public void CART006_testAddingMultipleItemToCardFromHomePage(){
-        CartData cartData = JsonUtil.convertJsonToPojo(
-            JsonUtil.readFile(FilePaths.CART_TEST_DATA + testCaseId), CartData.class);
-        HomePage homePage = loginAndAddToCart(testCaseId);
-        List<Item> items = homePage.getItemDetails(cartData.getItemsToAdd());
-        gotoCartAndVerify(homePage, items);
+        testAddToCartFeature(testCaseId);
                 
     }
 
     @Test
     public void CART007_testRemovingSingleItemFromCartFromHomepage(){
-        CartData cartData = JsonUtil.convertJsonToPojo(
-            JsonUtil.readFile(FilePaths.CART_TEST_DATA + testCaseId), CartData.class);
-        HomePage homePage = loginAndAddToCart(testCaseId);
-        List<Item> items = homePage.getItemDetails(cartData.getItemsToAdd());
-        CartPage cartPage = gotoCartAndVerify(homePage, items);
-        homePage = cartPage.goBackToHomePage();
-        homePage.removeItemsFromCart(cartData.getItemsToRemove());
-        gotoCartAndVerify(homePage, getRemainingItemsInCart(items, cartData.getItemsToRemove()));
+        testRemovingFromCart(testCaseId);
     }
-
+    
+    
     @Test
     public void CART008_testRemovingMultipleItemsFromCartFromHomepage(){
-        CartData cartData = JsonUtil.convertJsonToPojo(
-            JsonUtil.readFile(FilePaths.CART_TEST_DATA + testCaseId), CartData.class);
-        HomePage homePage = loginAndAddToCart(testCaseId);
-        List<Item> items = homePage.getItemDetails(cartData.getItemsToAdd());
-        CartPage cartPage = gotoCartAndVerify(homePage, items);
-        homePage = cartPage.goBackToHomePage();
-        homePage.removeItemsFromCart(cartData.getItemsToRemove());
-        gotoCartAndVerify(homePage, getRemainingItemsInCart(items, cartData.getItemsToRemove()));
+        testRemovingFromCart(testCaseId);
     }
 
     @Test
     public void CART009_testRemovingMultipleItemsFromCartFromHomepage(){
+        testRemovingFromCart(testCaseId);
+    }
+
+    private CartPage testAddToCartFeature(String testCaseId){
         CartData cartData = JsonUtil.convertJsonToPojo(
             JsonUtil.readFile(FilePaths.CART_TEST_DATA + testCaseId), CartData.class);
         HomePage homePage = loginAndAddToCart(testCaseId);
         List<Item> items = homePage.getItemDetails(cartData.getItemsToAdd());
-        CartPage cartPage = gotoCartAndVerify(homePage, items);
-        homePage = cartPage.goBackToHomePage();
+        
+        CartPage cartPage = homePage.goToCart();
+        List<Item> itemsInCart = cartPage.getItemsInCart();
+
+        assertUtil.assertEquals(itemsInCart.size(), items.size(),
+                "No Of items in Cart");
+        
+        if(itemsInCart.size()>0){
+            items.forEach(item->{
+                
+                Item itemInCart = itemsInCart.stream()
+                        .filter(cartItem -> cartItem.getName().equals(item.getName()))
+                        .findFirst().get();
+                assertUtil.assertNotNull(itemInCart, "Item found in Cart");
+                assertUtil.assertEquals(itemInCart.getName(), item.getName(),
+                        "Item Name");
+                assertUtil.assertEquals(itemInCart.getPrice(), item.getPrice(),
+                        "Item Price");
+                assertUtil.assertEquals(itemInCart.getDescription(),
+                        item.getDescription(), "Item Description");
+                
+            });
+        }
+        return cartPage;
+    }
+
+    private void testRemovingFromCart(String testCaseId) {
+        CartPage cartPage = testAddToCartFeature(testCaseId);
+        testRemovingFromCart(cartPage, testCaseId);
+    }
+    
+    private void testRemovingFromCart(CartPage cartPage, String testCaseId){
+        CartData cartData = JsonUtil.convertJsonToPojo(
+            JsonUtil.readFile(FilePaths.CART_TEST_DATA + testCaseId), CartData.class);
+        HomePage homePage = cartPage.goBackToHomePage();
+        List<Item> items = homePage.getItemDetails(cartData.getItemsToAdd());
         homePage.removeItemsFromCart(cartData.getItemsToRemove());
         gotoCartAndVerify(homePage, getRemainingItemsInCart(items, cartData.getItemsToRemove()));
     }
@@ -124,11 +125,7 @@ public class CartTests extends BaseTest{
                 JsonUtil.readFile(FilePaths.CART_TEST_DATA + testCaseId), CartData.class);
         LoginPage loginPage = new LoginPage(driver);
         HomePage homePage = loginPage.loginExpectingSuccess(cartData.getUser());
-
-        cartData.getItemsToAdd().forEach(itemName->{
-            homePage.clickOnAddRemoveButton(itemName);
-        });
-
+        homePage.addItemsToCart(cartData.getItemsToAdd());
         return homePage;
     }
 

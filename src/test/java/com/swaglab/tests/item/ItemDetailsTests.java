@@ -20,59 +20,36 @@ public class ItemDetailsTests extends BaseTest{
     
     @Test
     public void ITEM001_testSingleItemDetails(){
-        testSingleItemDetails(testCaseId);
+        testItemDetails(testCaseId);
     }
 
     @Test
     public void ITEM002_testSingleItemDetails(){
-        testSingleItemDetails(testCaseId);
+        testItemDetails(testCaseId);
     }
 
     @Test
     public void ITEM003_testSingleItemDetails(){
-        testSingleItemDetails(testCaseId);
+        testItemDetails(testCaseId);
     }
 
     @Test
     public void ITEM004_testMultipleItemDetails(){
-        testMultipleItemDetails(testCaseId);
+        testItemDetails(testCaseId);
     }
 
     @Test
     public void ITEM005_testMultipleItemDetails(){
-        testMultipleItemDetails(testCaseId);
+        testItemDetails(testCaseId);
     }
 
     @Test
     public void ITEM006_testMultipleItemDetails(){
-        testMultipleItemDetails(testCaseId);
-    }
-
-    private void testSingleItemDetails(String testCaseId){
-        ItemDetailsTestData testData = ExcelUtil.getRowIntoPojo(FilePaths.ITEM_DETAILS_TEST_DATA, 
-            ItemDetailsTestData.class, "TestCaseId", testCaseId);
-        
-        LoginPage loginPage = new LoginPage(driver);
-        HomePage homePage = loginPage.loginExpectingSuccess(testData.getUser());
-        
-        Item Item = homePage.getSingleItemDetails(testData.getItemNames());
-        IndividualItemPage individualItemPage = homePage.goToIndividualItemPage(
-                testData.getItemNames());
-
-        assertUtil.assertTrue(individualItemPage.getCurrentUrl().contains(
-                                Constants.INDIVIDUAL_ITEM_PAGE_URL
-                            ), 
-                            "Individual Page Url is Correct");
-        assertUtil.assertEquals(individualItemPage.getItemName(), Item.getName(),
-            "Item Name");
-        assertUtil.assertEquals(individualItemPage.getItemDesc(), Item.getDescription(),
-            "Item Desc");
-        assertUtil.assertEquals(individualItemPage.getItemPrice(), Item.getPrice(),
-            "Item Price");
+        testItemDetails(testCaseId);
     }
 
 
-    private void testMultipleItemDetails(String testCaseId){
+    private void testItemDetails(String testCaseId){
         ItemDetailsTestData testData = ExcelUtil.getRowIntoPojo(FilePaths.ITEM_DETAILS_TEST_DATA, 
             ItemDetailsTestData.class, "TestCaseId", testCaseId);
         
@@ -80,22 +57,19 @@ public class ItemDetailsTests extends BaseTest{
         HomePage homePage = loginPage.loginExpectingSuccess(testData.getUser());
         
         List<String> itemNames = Arrays.asList(testData.getItemNames().split(","));
-        itemNames.forEach(ItemName->{
-            Item Item = homePage.getSingleItemDetails(ItemName);
-            IndividualItemPage individualItemPage = homePage.goToIndividualItemPage(
-                    ItemName);
+        itemNames.forEach(itemName->{
+            Item Item = homePage.getSingleItemDetails(itemName);
+            IndividualItemPage individualItemPage = homePage.goToIndividualItemPage(itemName);
 
             assertUtil.assertTrue(individualItemPage.getCurrentUrl().contains(
-                                    Constants.INDIVIDUAL_ITEM_PAGE_URL
-                                ), 
-                                "Indivitual Page Url is Correct");
+                    Constants.INDIVIDUAL_ITEM_PAGE_URL),
+                    "Indivitual Page Url is Correct");
             assertUtil.assertEquals(individualItemPage.getItemName(), Item.getName(),
-                "Item Name");
-            assertUtil.assertEquals(individualItemPage.getItemDesc(), 
-                Item.getDescription(), "Item Desc");
+                    "Item Name");
+            assertUtil.assertEquals(individualItemPage.getItemDesc(),
+                    Item.getDescription(), "Item Desc");
             assertUtil.assertEquals(individualItemPage.getItemPrice(), Item.getPrice(),
                 "Item Price");
-            
             individualItemPage.navigateBack();
         });   
     }

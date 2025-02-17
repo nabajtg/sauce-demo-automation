@@ -109,6 +109,12 @@ public class HomePage extends BasePage{
         
     }
 
+    public void addItemsToCart(List<String> itemNames){
+        itemNames.forEach(itemName->{
+            clickOnAddRemoveButton(itemName);
+        });
+    }
+
     public void removeItemsFromCart(List<String> itemNames){
         itemNames.forEach(itemName->{
             clickOnAddRemoveButton(itemName);
