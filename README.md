@@ -19,11 +19,11 @@ SauceDemoTestAutomation/
 │-- src/
 │   ├── main/
 │   │   ├── java/
-│   │   │   │   ├── com/
+│   │   │   ├── com/
 │   │   │   │   ├── swaglab/
 │   │   │   │   │   ├── constants
 │   │   │   │   │   ├── domains      
-│   │   │   │   │   ├── enums        # Enums
+│   │   │   │   │   ├── enums
 │   │   │   │   │   ├── pages        # Page Object Model (POM) classes
 │   │   │   │   │   ├── utils        # Utility classes (Excel, JSON handling, WebDriver management)
 │   ├── test/
