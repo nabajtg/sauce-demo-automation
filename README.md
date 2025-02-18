@@ -28,7 +28,7 @@ SauceDemoTestAutomation/
 │   │   │   │   │   ├── utils        # Utility classes (Excel, JSON handling, WebDriver management)
 │   ├── test/
 │   │   ├── java/
-|   |   |   ├── com/
+│   │   │   ├── com/
 │   │   │   │   ├── swaglab/
 │   │   │   │   │   ├── data        # Test data (Excel and JSON)
 │   │   │   │   │   ├── tests       # Test cases   
