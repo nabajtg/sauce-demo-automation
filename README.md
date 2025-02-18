@@ -14,7 +14,7 @@ This project is a test automation framework for SauceDemo, developed using Java,
 - Maven - Build and dependency management tool
 
 ## Project Structure
-
+```bash
 SauceDemoTestAutomation/
 │-- src/
 │   ├── main/
@@ -27,7 +27,7 @@ SauceDemoTestAutomation/
 │   │   │   ├── testdata/     # JSON and Excel test data files
 │-- pom.xml
 │-- README.md
-
+```
 ## Installation & Setup
 
 Clone the Repository
