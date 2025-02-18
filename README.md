@@ -2,7 +2,7 @@
 
 ## Overview
 
-Test automation framework for [SauceDemo](https://www.saucedemo.com/), developed using **Java, Selenium WebDriver, TestNG and Extent Report**. The framework supports data-driven testing, utilizing both **Excel and JSON** files for test data management.
+Test automation framework for [SauceDemo](https://www.saucedemo.com/) , using **Java, Selenium WebDriver, TestNG and Extent Report**, implemented using **Page Object Model** design pattern. The framework supports **data-driven testing**, utilizing both **Excel and JSON** files for test data management.
 
 ## Technologies Used
 
