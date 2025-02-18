@@ -15,7 +15,7 @@ Test automation framework for [SauceDemo](https://www.saucedemo.com/), developed
 
 ## Project Structure
 ```bash
-SauceDemoTestAutomation/
+sauce-demo-automation/
 │-- src/
 │   ├── main/
 │   │   ├── java/
