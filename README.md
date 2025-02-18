@@ -2,7 +2,7 @@
 
 ## Overview
 
-Test automation framework for [SauceDemo](https://www.saucedemo.com/), developed using **Java, Selenium WebDriver, and TestNG**. The framework supports data-driven testing, utilizing both **Excel and JSON** files for test data management.
+Test automation framework for [SauceDemo](https://www.saucedemo.com/), developed using **Java, Selenium WebDriver, TestNG and Extent Report**. The framework supports data-driven testing, utilizing both **Excel and JSON** files for test data management.
 
 ## Technologies Used
 
@@ -26,7 +26,7 @@ sauce-demo-automation/
 │   │   │   │   │   ├── domains      
 │   │   │   │   │   ├── enums
 │   │   │   │   │   ├── pages        # Page Object Model (POM) classes
-│   │   │   │   │   ├── utils        # Utility classes (Excel, JSON handling, WebDriver management)
+│   │   │   │   │   ├── utils        # Utility classes (Excel, JSON, Assert, Extent Report)
 │   ├── test/
 │   │   ├── java/
 │   │   │   ├── com/
@@ -40,15 +40,16 @@ sauce-demo-automation/
 
 ## Test Data Management
 
-For test data management, both **Excel** and **JSON** files are used.
+To demostrate data-driven testing, I have used both **Excel** and **JSON** files.
+
+### Utility Classes
+
+- **ExcelUtil** - Handles reading and writing Excel test data.
+
+- **JsonUtil** - Manages parsing and retrieving test data from JSON files.
 
 ### JSON Test Data
-
-For **Cart and Order** test cases, JSON test data is utilize.
-
-Example:
-
-Test Data Location: src/test/com/swaglab/data/cart/CART009.json
+Example: **src/test/java/com/swaglab/data/cart/CART009.json**
 ```JSON
 {
     "user": "standard_user",
@@ -64,18 +65,37 @@ Test Data Location: src/test/com/swaglab/data/cart/CART009.json
 }
 ```
 ### Excel Test Data
+Example: **src/test/java/com/swaglab/data/login/LoginTestData.xlsx**
 
-Test data stored in Excel files are located in src/test/resources/testdata/data.xlsx.
-
-### Utility Classes
-
-- **ExcelUtil** - Handles reading and writing Excel test data.
-
-- **JsonUtil** - Manages parsing and retrieving test data from JSON files.
+TestCaseId | User | Error
+--- | --- | --- |
+LOGIN001 | invalid_user | Epic sadface: Username and password do not match any user in this service
 
 ## Reporting
+Test reports are generated using Extent Report under test-output after test execution. \
+Created one utility class to manage Extent Reporting named **ExtentUtil**
 
-Test reports are generated under target/surefire-reports after test execution.
+## Assertion
+Created one utility class **AssertUtil** which extends **SoftAssert** class from **TestNG framework** \
+This utility class helps to record all assertion performed during test execution and at the last it logs all assertion results to console/extent-report.
+```java
+public class AssertUtil extends SoftAssert {
+    @Override
+    public void onAssertFailure(IAssert<?> assertCommand, AssertionError ex) {
+        //record assert failure
+    }
+
+    @Override
+	public void onAssertSuccess(IAssert<?> assertCommand) {
+        //record assert success
+    }
+
+    @Override
+    public void assertAll(String msg) {
+        // log all assertions at last
+    }
+}
+```
 
 ## Contributing
 
