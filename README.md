@@ -19,14 +19,22 @@ SauceDemoTestAutomation/
 │-- src/
 │   ├── main/
 │   │   ├── java/
-│   │   │   ├── pages/        # Page Object Model (POM) classes
-│   │   │   ├── utils/        # Utility classes (Excel, JSON handling, WebDriver management)
+|   |   |   ├── com/
+|   |   |   |   ├── swaglab/
+|   |   |   |   |   ├── constants
+|   |   |   |   |   ├── domains      
+|   |   |   |   |   ├── enums        # Enums
+|   |   |   |   |   ├── pages        # Page Object Model (POM) classes
+|   |   |   |   |   ├── utils        # Utility classes (Excel, JSON handling, WebDriver management)
 │   ├── test/
 │   │   ├── java/
-│   │   │   ├── tests/        # Test cases
-│   │   │   ├── testdata/     # JSON and Excel test data files
+|   |   |   ├── com/
+|   |   |   |   ├── swaglab/
+|   |   |   |   |   ├── data        # Test data (Excel and JSON)
+|   |   |   |   |   ├── tests       # Test cases   
 │-- pom.xml
 │-- README.md
+|-- SauceLab_TestcaseDoc.xlsx
 ```
 ## Installation & Setup
 
