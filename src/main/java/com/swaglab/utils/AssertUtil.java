@@ -1,8 +1,6 @@
 package com.swaglab.utils;
 
 import org.testng.asserts.SoftAssert;
-
-import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
 import lombok.Setter;
@@ -20,10 +18,10 @@ public class AssertUtil extends SoftAssert {
 		PASSED, FAILED
 	};
 
-	private ExtentTest extentTest;
+	private ExtentUtil extentUtil;
 	
-	public AssertUtil(ExtentTest extentTest) {
-		this.extentTest = extentTest;
+	public AssertUtil(ExtentUtil extentUtil) {
+		this.extentUtil = extentUtil;
 	}
 
 	@Override
@@ -46,15 +44,15 @@ public class AssertUtil extends SoftAssert {
     	System.out.println();
     	System.out.println("**************************************************************");
     	System.out.println("VALIDATIONS FOR " + msg);
-		extentTest.log(Status.INFO, "VALIDATIONS FOR " + msg);
+		extentUtil.logInfoInReport("VALIDATIONS FOR " + msg);
     	
 		results.forEach(res ->{
     		if(res.contains(AssertStatus.PASSED.toString())) {
 				System.out.println(res);
-				extentTest.log(Status.PASS, res);
+				extentUtil.getCurrentTest().log(Status.PASS, res);
     		}else {
     			System.err.println(res);
-				extentTest.log(Status.FAIL, res);
+				extentUtil.getCurrentTest().log(Status.FAIL, res);
     		}
     		
     	});

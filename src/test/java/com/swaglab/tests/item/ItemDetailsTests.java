@@ -16,11 +16,11 @@ import com.swaglab.tests.base.BaseTest;
 import com.swaglab.utils.ExcelUtil;
 
 public class ItemDetailsTests extends BaseTest{
-
     
     @Test
     public void ITEM001_testSingleItemDetails(){
         testItemDetails(testCaseId);
+        
     }
 
     @Test

@@ -1,6 +1,5 @@
 package com.swaglab.tests.base;
 
-import java.lang.reflect.Method;
 import java.time.Duration;
 import java.util.ArrayList;
 
@@ -10,11 +9,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
 
-import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.swaglab.constants.Constants;
 import com.swaglab.utils.AssertUtil;
@@ -22,31 +18,29 @@ import com.swaglab.utils.ExtentUtil;
 
 import lombok.Getter;
 
-public abstract class BaseTest{
+public class BaseTest {
+
+    protected static final ExtentUtil extentUtil = new ExtentUtil();
+    
+    private String suiteName; 
 
     protected WebDriver driver;
     protected @Getter String testCaseId;
 
-    protected ExtentUtil extentUtil = new ExtentUtil();
-    private ExtentTest extentTest;
     protected AssertUtil assertUtil;
-    
 
-    @BeforeTest
-    public void beforeTest(){
-        extentUtil.configureReporter();
-    }
 
     @BeforeMethod
-    public void beforeMethod(Method method, ITestContext testContext){
-        String testName = method.getName();
-        System.out.println("Test Name: " + testName);
-        extentTest = extentUtil.createExtentTest(testName);
-        extentTest.log(Status.INFO, "Test Name: " + testName);
-        assertUtil = new AssertUtil(extentTest);
+    public void beforeMethod(ITestResult result, ITestContext testContext){
+        String testName = result.getMethod().getMethodName();
+        suiteName = testContext.getSuite().getName();
+        System.out.println("Started test: " + testName);
         
-
-        testCaseId = method.getName().split("_")[0];
+        extentUtil.createExtentTest(testName, suiteName);
+        extentUtil.getCurrentTest().log(Status.INFO, "Test: " + testName);
+        
+        assertUtil = new AssertUtil(extentUtil);
+        testCaseId = testName.split("_")[0];
 
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--incognito");
@@ -59,25 +53,14 @@ public abstract class BaseTest{
         
         assertUtil.setResults(new ArrayList<String>());
         assertUtil.assertEquals(driver.getTitle(), "Swag Labs", "Page Title");
-
-        
     }
 
     @AfterMethod
-    public void afterMethod(ITestResult result, Method method){
-        assertUtil.assertAll(method.getName());
+    public void afterMethod(ITestResult result){
+        assertUtil.assertAll(result.getMethod().getMethodName());
         driver.quit();
-
-        extentUtil.logResult(result, extentTest);
+        extentUtil.getReportInstance(suiteName).flush();    
     }
 
-    @AfterTest
-    public void afterTest(){
-        extentUtil.tearDown();
-    }
-
-    protected void logMessageInExtentReport(String message){
-        extentUtil.logMessage(extentTest, message);
-    }
 
 }

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="SauceLabSuite" parallel="false" >
+    
+    <test name="Tests" verbose="2" preserve-order="true">
+        <classes>
+            
+            <!-- login -->
+            <class name="com.swaglab.tests.login.LoginTests"/> 
+            
+            <!-- items -->
+            <class name="com.swaglab.tests.item.ItemDetailsTests"/>
+            <class name="com.swaglab.tests.item.ItemSortingOrderTests"/>
+
+            <!-- cart -->
+            <class name="com.swaglab.tests.cart.CartTests"/>
+
+            <!-- order -->
+            <class name="com.swaglab.tests.order.OrderTests"/>
+            
+        </classes>
+    </test>
+
+</suite>

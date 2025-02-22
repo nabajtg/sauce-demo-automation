@@ -1,0 +1,3481 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Sauce Lab Automation Report</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa -report dark">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Test Report</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">22-02-2025 15:31:36</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">LOGIN01_testStandardUserLogin</p>
+            <p class="text-sm">
+              <span>3:31:36 PM</span> / <span>00:00:03:321</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">LOGIN01_testStandardUserLogin</h5>
+<span class='badge badge-success'>02.22.2025 3:31:36 PM</span>
+<span class='badge badge-danger'>02.22.2025 3:31:39 PM</span>
+<span class='badge badge-default'>00:00:03:321</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:31:36 PM</td>
+        <td>
+          Test: LOGIN01_testStandardUserLogin
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:31:39 PM</td>
+        <td>
+          VALIDATIONS FOR LOGIN01_testStandardUserLogin
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:31:39 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Page Title, EXPECTED: Swag Labs, ACTUAL: Swag Labs
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:31:39 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Home Page Url, EXPECTED: https://www.saucedemo.com/inventory.html, ACTUAL: https://www.saucedemo.com/inventory.html
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="2"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">LOGIN02_testInvalidUserLogin</p>
+            <p class="text-sm">
+              <span>3:31:40 PM</span> / <span>00:00:02:252</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">LOGIN02_testInvalidUserLogin</h5>
+<span class='badge badge-success'>02.22.2025 3:31:40 PM</span>
+<span class='badge badge-danger'>02.22.2025 3:31:42 PM</span>
+<span class='badge badge-default'>00:00:02:252</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:31:40 PM</td>
+        <td>
+          Test: LOGIN02_testInvalidUserLogin
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:31:42 PM</td>
+        <td>
+          VALIDATIONS FOR LOGIN02_testInvalidUserLogin
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:31:42 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Page Title, EXPECTED: Swag Labs, ACTUAL: Swag Labs
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:31:42 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Login Error Message, EXPECTED: Epic sadface: Username and password do not match any user in this service, ACTUAL: Epic sadface: Username and password do not match any user in this service
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="3"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">LOGIN03_testLockedUserLogin</p>
+            <p class="text-sm">
+              <span>3:31:42 PM</span> / <span>00:00:02:515</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">LOGIN03_testLockedUserLogin</h5>
+<span class='badge badge-success'>02.22.2025 3:31:42 PM</span>
+<span class='badge badge-danger'>02.22.2025 3:31:45 PM</span>
+<span class='badge badge-default'>00:00:02:515</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:31:42 PM</td>
+        <td>
+          Test: LOGIN03_testLockedUserLogin
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:31:45 PM</td>
+        <td>
+          VALIDATIONS FOR LOGIN03_testLockedUserLogin
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:31:45 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Page Title, EXPECTED: Swag Labs, ACTUAL: Swag Labs
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:31:45 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Login Error Message, EXPECTED: Epic sadface: Sorry, this user has been locked out., ACTUAL: Epic sadface: Sorry, this user has been locked out.
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="4"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">LOGIN04_testProblemUserLogin</p>
+            <p class="text-sm">
+              <span>3:31:45 PM</span> / <span>00:00:02:045</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">LOGIN04_testProblemUserLogin</h5>
+<span class='badge badge-success'>02.22.2025 3:31:45 PM</span>
+<span class='badge badge-danger'>02.22.2025 3:31:47 PM</span>
+<span class='badge badge-default'>00:00:02:045</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:31:45 PM</td>
+        <td>
+          Test: LOGIN04_testProblemUserLogin
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:31:47 PM</td>
+        <td>
+          VALIDATIONS FOR LOGIN04_testProblemUserLogin
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:31:47 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Page Title, EXPECTED: Swag Labs, ACTUAL: Swag Labs
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:31:47 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Home Page Url, EXPECTED: https://www.saucedemo.com/inventory.html, ACTUAL: https://www.saucedemo.com/inventory.html
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="5"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">LOGIN04_testVisualUserLogin</p>
+            <p class="text-sm">
+              <span>3:31:47 PM</span> / <span>00:00:02:185</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">LOGIN04_testVisualUserLogin</h5>
+<span class='badge badge-success'>02.22.2025 3:31:47 PM</span>
+<span class='badge badge-danger'>02.22.2025 3:31:49 PM</span>
+<span class='badge badge-default'>00:00:02:185</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:31:47 PM</td>
+        <td>
+          Test: LOGIN04_testVisualUserLogin
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:31:49 PM</td>
+        <td>
+          VALIDATIONS FOR LOGIN04_testVisualUserLogin
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:31:49 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Page Title, EXPECTED: Swag Labs, ACTUAL: Swag Labs
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:31:49 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Home Page Url, EXPECTED: https://www.saucedemo.com/inventory.html, ACTUAL: https://www.saucedemo.com/inventory.html
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="6"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">LOGIN05_testPerformanceGlitchUserLogin</p>
+            <p class="text-sm">
+              <span>3:31:49 PM</span> / <span>00:00:07:243</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">LOGIN05_testPerformanceGlitchUserLogin</h5>
+<span class='badge badge-success'>02.22.2025 3:31:49 PM</span>
+<span class='badge badge-danger'>02.22.2025 3:31:56 PM</span>
+<span class='badge badge-default'>00:00:07:243</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:31:49 PM</td>
+        <td>
+          Test: LOGIN05_testPerformanceGlitchUserLogin
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:31:56 PM</td>
+        <td>
+          VALIDATIONS FOR LOGIN05_testPerformanceGlitchUserLogin
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:31:56 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Page Title, EXPECTED: Swag Labs, ACTUAL: Swag Labs
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:31:56 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Home Page Url, EXPECTED: https://www.saucedemo.com/inventory.html, ACTUAL: https://www.saucedemo.com/inventory.html
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="7"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">LOGIN06_testErrorUserLogin</p>
+            <p class="text-sm">
+              <span>3:31:57 PM</span> / <span>00:00:01:858</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">LOGIN06_testErrorUserLogin</h5>
+<span class='badge badge-success'>02.22.2025 3:31:57 PM</span>
+<span class='badge badge-danger'>02.22.2025 3:31:58 PM</span>
+<span class='badge badge-default'>00:00:01:858</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:31:57 PM</td>
+        <td>
+          Test: LOGIN06_testErrorUserLogin
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:31:58 PM</td>
+        <td>
+          VALIDATIONS FOR LOGIN06_testErrorUserLogin
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:31:58 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Page Title, EXPECTED: Swag Labs, ACTUAL: Swag Labs
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:31:58 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Home Page Url, EXPECTED: https://www.saucedemo.com/inventory.html, ACTUAL: https://www.saucedemo.com/inventory.html
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="8"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">ITEM001_testSingleItemDetails</p>
+            <p class="text-sm">
+              <span>3:31:59 PM</span> / <span>00:00:02:460</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">ITEM001_testSingleItemDetails</h5>
+<span class='badge badge-success'>02.22.2025 3:31:59 PM</span>
+<span class='badge badge-danger'>02.22.2025 3:32:01 PM</span>
+<span class='badge badge-default'>00:00:02:460</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:31:59 PM</td>
+        <td>
+          Test: ITEM001_testSingleItemDetails
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:01 PM</td>
+        <td>
+          VALIDATIONS FOR ITEM001_testSingleItemDetails
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:01 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Page Title, EXPECTED: Swag Labs, ACTUAL: Swag Labs
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:01 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Indivitual Page Url is Correct, EXPECTED: true, ACTUAL: true
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:01 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Name, EXPECTED: Sauce Labs Fleece Jacket, ACTUAL: Sauce Labs Fleece Jacket
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:01 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Desc, EXPECTED: It's not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office., ACTUAL: It's not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:01 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Price, EXPECTED: 49.99, ACTUAL: 49.99
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="9"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">ITEM002_testSingleItemDetails</p>
+            <p class="text-sm">
+              <span>3:32:01 PM</span> / <span>00:00:02:637</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">ITEM002_testSingleItemDetails</h5>
+<span class='badge badge-success'>02.22.2025 3:32:01 PM</span>
+<span class='badge badge-danger'>02.22.2025 3:32:04 PM</span>
+<span class='badge badge-default'>00:00:02:637</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:01 PM</td>
+        <td>
+          Test: ITEM002_testSingleItemDetails
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:04 PM</td>
+        <td>
+          VALIDATIONS FOR ITEM002_testSingleItemDetails
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:04 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Page Title, EXPECTED: Swag Labs, ACTUAL: Swag Labs
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:04 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Indivitual Page Url is Correct, EXPECTED: true, ACTUAL: true
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:32:04 PM</td>
+        <td>
+          FAILED VALIDATION FOR: Item Name, EXPECTED: Sauce Labs Fleece Jacket, ACTUAL: ITEM NOT FOUND
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:32:04 PM</td>
+        <td>
+          FAILED VALIDATION FOR: Item Desc, EXPECTED: It's not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office., ACTUAL: We're sorry, but your call could not be completed as dialled. Please check your number, and try your call again. If you are in need of assistance, please dial 0 to be connected with an operator. This is a recording. 4 T 1.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:32:04 PM</td>
+        <td>
+          FAILED VALIDATION FOR: Item Price, EXPECTED: 49.99, ACTUAL: null
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="10"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">ITEM003_testSingleItemDetails</p>
+            <p class="text-sm">
+              <span>3:32:04 PM</span> / <span>00:00:02:623</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">ITEM003_testSingleItemDetails</h5>
+<span class='badge badge-success'>02.22.2025 3:32:04 PM</span>
+<span class='badge badge-danger'>02.22.2025 3:32:06 PM</span>
+<span class='badge badge-default'>00:00:02:623</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=10</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:04 PM</td>
+        <td>
+          Test: ITEM003_testSingleItemDetails
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:06 PM</td>
+        <td>
+          VALIDATIONS FOR ITEM003_testSingleItemDetails
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:06 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Page Title, EXPECTED: Swag Labs, ACTUAL: Swag Labs
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:06 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Indivitual Page Url is Correct, EXPECTED: true, ACTUAL: true
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:06 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Name, EXPECTED: Sauce Labs Fleece Jacket, ACTUAL: Sauce Labs Fleece Jacket
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:32:06 PM</td>
+        <td>
+          FAILED VALIDATION FOR: Item Desc, EXPECTED: It's not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office., ACTUAL: A description should be here, but it failed to render! This error has been reported to Backtrace.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:06 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Price, EXPECTED: 49.99, ACTUAL: 49.99
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="11"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">ITEM004_testMultipleItemDetails</p>
+            <p class="text-sm">
+              <span>3:32:07 PM</span> / <span>00:00:03:202</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">ITEM004_testMultipleItemDetails</h5>
+<span class='badge badge-success'>02.22.2025 3:32:07 PM</span>
+<span class='badge badge-danger'>02.22.2025 3:32:10 PM</span>
+<span class='badge badge-default'>00:00:03:202</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=11</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:07 PM</td>
+        <td>
+          Test: ITEM004_testMultipleItemDetails
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:10 PM</td>
+        <td>
+          VALIDATIONS FOR ITEM004_testMultipleItemDetails
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:10 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Page Title, EXPECTED: Swag Labs, ACTUAL: Swag Labs
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:10 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Indivitual Page Url is Correct, EXPECTED: true, ACTUAL: true
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:10 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Name, EXPECTED: Sauce Labs Fleece Jacket, ACTUAL: Sauce Labs Fleece Jacket
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:10 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Desc, EXPECTED: It's not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office., ACTUAL: It's not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:10 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Price, EXPECTED: 49.99, ACTUAL: 49.99
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:10 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Indivitual Page Url is Correct, EXPECTED: true, ACTUAL: true
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:10 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Name, EXPECTED: Sauce Labs Onesie, ACTUAL: Sauce Labs Onesie
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:10 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Desc, EXPECTED: Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel., ACTUAL: Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:10 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Price, EXPECTED: 7.99, ACTUAL: 7.99
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:10 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Indivitual Page Url is Correct, EXPECTED: true, ACTUAL: true
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:10 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Name, EXPECTED: Sauce Labs Bike Light, ACTUAL: Sauce Labs Bike Light
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:10 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Desc, EXPECTED: A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included., ACTUAL: A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:10 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Price, EXPECTED: 9.99, ACTUAL: 9.99
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="12"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">ITEM005_testMultipleItemDetails</p>
+            <p class="text-sm">
+              <span>3:32:10 PM</span> / <span>00:00:02:865</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">ITEM005_testMultipleItemDetails</h5>
+<span class='badge badge-success'>02.22.2025 3:32:10 PM</span>
+<span class='badge badge-danger'>02.22.2025 3:32:13 PM</span>
+<span class='badge badge-default'>00:00:02:865</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=12</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:10 PM</td>
+        <td>
+          Test: ITEM005_testMultipleItemDetails
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:13 PM</td>
+        <td>
+          VALIDATIONS FOR ITEM005_testMultipleItemDetails
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:13 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Page Title, EXPECTED: Swag Labs, ACTUAL: Swag Labs
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:13 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Indivitual Page Url is Correct, EXPECTED: true, ACTUAL: true
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:32:13 PM</td>
+        <td>
+          FAILED VALIDATION FOR: Item Name, EXPECTED: Sauce Labs Fleece Jacket, ACTUAL: ITEM NOT FOUND
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:32:13 PM</td>
+        <td>
+          FAILED VALIDATION FOR: Item Desc, EXPECTED: It's not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office., ACTUAL: We're sorry, but your call could not be completed as dialled. Please check your number, and try your call again. If you are in need of assistance, please dial 0 to be connected with an operator. This is a recording. 4 T 1.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:32:13 PM</td>
+        <td>
+          FAILED VALIDATION FOR: Item Price, EXPECTED: 49.99, ACTUAL: null
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:13 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Indivitual Page Url is Correct, EXPECTED: true, ACTUAL: true
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:32:13 PM</td>
+        <td>
+          FAILED VALIDATION FOR: Item Name, EXPECTED: Sauce Labs Onesie, ACTUAL: Test.allTheThings() T-Shirt (Red)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:32:13 PM</td>
+        <td>
+          FAILED VALIDATION FOR: Item Desc, EXPECTED: Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel., ACTUAL: This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:32:13 PM</td>
+        <td>
+          FAILED VALIDATION FOR: Item Price, EXPECTED: 7.99, ACTUAL: 15.99
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:13 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Indivitual Page Url is Correct, EXPECTED: true, ACTUAL: true
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:32:13 PM</td>
+        <td>
+          FAILED VALIDATION FOR: Item Name, EXPECTED: Sauce Labs Bike Light, ACTUAL: Sauce Labs Bolt T-Shirt
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:32:13 PM</td>
+        <td>
+          FAILED VALIDATION FOR: Item Desc, EXPECTED: A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included., ACTUAL: Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:32:13 PM</td>
+        <td>
+          FAILED VALIDATION FOR: Item Price, EXPECTED: 9.99, ACTUAL: 15.99
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="13"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">ITEM006_testMultipleItemDetails</p>
+            <p class="text-sm">
+              <span>3:32:13 PM</span> / <span>00:00:03:034</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">ITEM006_testMultipleItemDetails</h5>
+<span class='badge badge-success'>02.22.2025 3:32:13 PM</span>
+<span class='badge badge-danger'>02.22.2025 3:32:16 PM</span>
+<span class='badge badge-default'>00:00:03:034</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=13</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:13 PM</td>
+        <td>
+          Test: ITEM006_testMultipleItemDetails
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:16 PM</td>
+        <td>
+          VALIDATIONS FOR ITEM006_testMultipleItemDetails
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:16 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Page Title, EXPECTED: Swag Labs, ACTUAL: Swag Labs
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:16 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Indivitual Page Url is Correct, EXPECTED: true, ACTUAL: true
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:16 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Name, EXPECTED: Sauce Labs Fleece Jacket, ACTUAL: Sauce Labs Fleece Jacket
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:32:16 PM</td>
+        <td>
+          FAILED VALIDATION FOR: Item Desc, EXPECTED: It's not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office., ACTUAL: A description should be here, but it failed to render! This error has been reported to Backtrace.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:16 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Price, EXPECTED: 49.99, ACTUAL: 49.99
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:16 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Indivitual Page Url is Correct, EXPECTED: true, ACTUAL: true
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:16 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Name, EXPECTED: Sauce Labs Onesie, ACTUAL: Sauce Labs Onesie
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:32:16 PM</td>
+        <td>
+          FAILED VALIDATION FOR: Item Desc, EXPECTED: Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel., ACTUAL: A description should be here, but it failed to render! This error has been reported to Backtrace.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:16 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Price, EXPECTED: 7.99, ACTUAL: 7.99
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:16 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Indivitual Page Url is Correct, EXPECTED: true, ACTUAL: true
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:16 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Name, EXPECTED: Sauce Labs Bike Light, ACTUAL: Sauce Labs Bike Light
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:32:16 PM</td>
+        <td>
+          FAILED VALIDATION FOR: Item Desc, EXPECTED: A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included., ACTUAL: A description should be here, but it failed to render! This error has been reported to Backtrace.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:16 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Price, EXPECTED: 9.99, ACTUAL: 9.99
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="14"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">SORT001_testItemsDisplayedInAscendingOrderByName</p>
+            <p class="text-sm">
+              <span>3:32:16 PM</span> / <span>00:00:02:483</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">SORT001_testItemsDisplayedInAscendingOrderByName</h5>
+<span class='badge badge-success'>02.22.2025 3:32:16 PM</span>
+<span class='badge badge-danger'>02.22.2025 3:32:18 PM</span>
+<span class='badge badge-default'>00:00:02:483</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=14</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:16 PM</td>
+        <td>
+          Test: SORT001_testItemsDisplayedInAscendingOrderByName
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:18 PM</td>
+        <td>
+          VALIDATIONS FOR SORT001_testItemsDisplayedInAscendingOrderByName
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:18 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Page Title, EXPECTED: Swag Labs, ACTUAL: Swag Labs
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:18 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Items not Empty, EXPECTED: true, ACTUAL: true
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:18 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Items Displayed in ascendingByName, EXPECTED: [Sauce Labs Backpack, Sauce Labs Bike Light, Sauce Labs Bolt T-Shirt, Sauce Labs Fleece Jacket, Sauce Labs Onesie, Test.allTheThings() T-Shirt (Red)], ACTUAL: [Sauce Labs Backpack, Sauce Labs Bike Light, Sauce Labs Bolt T-Shirt, Sauce Labs Fleece Jacket, Sauce Labs Onesie, Test.allTheThings() T-Shirt (Red)]
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="15"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">SORT002_testItemsDisplayedInAscendingOrderByName</p>
+            <p class="text-sm">
+              <span>3:32:19 PM</span> / <span>00:00:02:545</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">SORT002_testItemsDisplayedInAscendingOrderByName</h5>
+<span class='badge badge-success'>02.22.2025 3:32:19 PM</span>
+<span class='badge badge-danger'>02.22.2025 3:32:21 PM</span>
+<span class='badge badge-default'>00:00:02:545</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=15</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:19 PM</td>
+        <td>
+          Test: SORT002_testItemsDisplayedInAscendingOrderByName
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:21 PM</td>
+        <td>
+          VALIDATIONS FOR SORT002_testItemsDisplayedInAscendingOrderByName
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:21 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Page Title, EXPECTED: Swag Labs, ACTUAL: Swag Labs
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:21 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Items not Empty, EXPECTED: true, ACTUAL: true
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:21 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Items Displayed in ascendingByName, EXPECTED: [Sauce Labs Backpack, Sauce Labs Bike Light, Sauce Labs Bolt T-Shirt, Sauce Labs Fleece Jacket, Sauce Labs Onesie, Test.allTheThings() T-Shirt (Red)], ACTUAL: [Sauce Labs Backpack, Sauce Labs Bike Light, Sauce Labs Bolt T-Shirt, Sauce Labs Fleece Jacket, Sauce Labs Onesie, Test.allTheThings() T-Shirt (Red)]
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="16"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">SORT003_testItemsDisplayedInAscendingOrderByName</p>
+            <p class="text-sm">
+              <span>3:32:21 PM</span> / <span>00:00:02:543</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">SORT003_testItemsDisplayedInAscendingOrderByName</h5>
+<span class='badge badge-success'>02.22.2025 3:32:21 PM</span>
+<span class='badge badge-danger'>02.22.2025 3:32:24 PM</span>
+<span class='badge badge-default'>00:00:02:543</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=16</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:21 PM</td>
+        <td>
+          Test: SORT003_testItemsDisplayedInAscendingOrderByName
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:24 PM</td>
+        <td>
+          VALIDATIONS FOR SORT003_testItemsDisplayedInAscendingOrderByName
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:24 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Page Title, EXPECTED: Swag Labs, ACTUAL: Swag Labs
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:24 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Items not Empty, EXPECTED: true, ACTUAL: true
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:24 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Items Displayed in ascendingByName, EXPECTED: [Sauce Labs Backpack, Sauce Labs Bike Light, Sauce Labs Bolt T-Shirt, Sauce Labs Fleece Jacket, Sauce Labs Onesie, Test.allTheThings() T-Shirt (Red)], ACTUAL: [Sauce Labs Backpack, Sauce Labs Bike Light, Sauce Labs Bolt T-Shirt, Sauce Labs Fleece Jacket, Sauce Labs Onesie, Test.allTheThings() T-Shirt (Red)]
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="17"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">SORT004_testItemsDisplayedInDescendingOrderByName</p>
+            <p class="text-sm">
+              <span>3:32:24 PM</span> / <span>00:00:02:653</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">SORT004_testItemsDisplayedInDescendingOrderByName</h5>
+<span class='badge badge-success'>02.22.2025 3:32:24 PM</span>
+<span class='badge badge-danger'>02.22.2025 3:32:27 PM</span>
+<span class='badge badge-default'>00:00:02:653</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=17</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:24 PM</td>
+        <td>
+          Test: SORT004_testItemsDisplayedInDescendingOrderByName
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:27 PM</td>
+        <td>
+          VALIDATIONS FOR SORT004_testItemsDisplayedInDescendingOrderByName
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:27 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Page Title, EXPECTED: Swag Labs, ACTUAL: Swag Labs
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:27 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Items not Empty, EXPECTED: true, ACTUAL: true
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:27 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Items Displayed in descendingByName, EXPECTED: [Test.allTheThings() T-Shirt (Red), Sauce Labs Onesie, Sauce Labs Fleece Jacket, Sauce Labs Bolt T-Shirt, Sauce Labs Bike Light, Sauce Labs Backpack], ACTUAL: [Test.allTheThings() T-Shirt (Red), Sauce Labs Onesie, Sauce Labs Fleece Jacket, Sauce Labs Bolt T-Shirt, Sauce Labs Bike Light, Sauce Labs Backpack]
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="18"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">SORT005_testItemsDisplayedInDescendingOrderByName</p>
+            <p class="text-sm">
+              <span>3:32:27 PM</span> / <span>00:00:02:551</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">SORT005_testItemsDisplayedInDescendingOrderByName</h5>
+<span class='badge badge-success'>02.22.2025 3:32:27 PM</span>
+<span class='badge badge-danger'>02.22.2025 3:32:29 PM</span>
+<span class='badge badge-default'>00:00:02:551</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=18</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:27 PM</td>
+        <td>
+          Test: SORT005_testItemsDisplayedInDescendingOrderByName
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:29 PM</td>
+        <td>
+          VALIDATIONS FOR SORT005_testItemsDisplayedInDescendingOrderByName
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:29 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Page Title, EXPECTED: Swag Labs, ACTUAL: Swag Labs
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:29 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Items not Empty, EXPECTED: true, ACTUAL: true
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:32:29 PM</td>
+        <td>
+          FAILED VALIDATION FOR: Items Displayed in descendingByName, EXPECTED: [Test.allTheThings() T-Shirt (Red), Sauce Labs Onesie, Sauce Labs Fleece Jacket, Sauce Labs Bolt T-Shirt, Sauce Labs Bike Light, Sauce Labs Backpack], ACTUAL: [Sauce Labs Backpack, Sauce Labs Bike Light, Sauce Labs Bolt T-Shirt, Sauce Labs Fleece Jacket, Sauce Labs Onesie, Test.allTheThings() T-Shirt (Red)]
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="19"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">SORT006_testItemsDisplayedInDescendingOrderByName</p>
+            <p class="text-sm">
+              <span>3:32:29 PM</span> / <span>00:00:02:771</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">SORT006_testItemsDisplayedInDescendingOrderByName</h5>
+<span class='badge badge-success'>02.22.2025 3:32:29 PM</span>
+<span class='badge badge-danger'>02.22.2025 3:32:32 PM</span>
+<span class='badge badge-default'>00:00:02:771</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=19</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:29 PM</td>
+        <td>
+          Test: SORT006_testItemsDisplayedInDescendingOrderByName
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:32 PM</td>
+        <td>
+          VALIDATIONS FOR SORT006_testItemsDisplayedInDescendingOrderByName
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:32 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Page Title, EXPECTED: Swag Labs, ACTUAL: Swag Labs
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:32 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Items not Empty, EXPECTED: true, ACTUAL: true
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:32:32 PM</td>
+        <td>
+          FAILED VALIDATION FOR: Items Displayed in descendingByName, EXPECTED: [Test.allTheThings() T-Shirt (Red), Sauce Labs Onesie, Sauce Labs Fleece Jacket, Sauce Labs Bolt T-Shirt, Sauce Labs Bike Light, Sauce Labs Backpack], ACTUAL: [Sauce Labs Backpack, Sauce Labs Bike Light, Sauce Labs Bolt T-Shirt, Sauce Labs Fleece Jacket, Sauce Labs Onesie, Test.allTheThings() T-Shirt (Red)]
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="20"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">SORT007_testItemsDisplayedInAscendingOrderByPrice</p>
+            <p class="text-sm">
+              <span>3:32:32 PM</span> / <span>00:00:02:439</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">SORT007_testItemsDisplayedInAscendingOrderByPrice</h5>
+<span class='badge badge-success'>02.22.2025 3:32:32 PM</span>
+<span class='badge badge-danger'>02.22.2025 3:32:35 PM</span>
+<span class='badge badge-default'>00:00:02:439</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=20</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:32 PM</td>
+        <td>
+          Test: SORT007_testItemsDisplayedInAscendingOrderByPrice
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:35 PM</td>
+        <td>
+          VALIDATIONS FOR SORT007_testItemsDisplayedInAscendingOrderByPrice
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:35 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Page Title, EXPECTED: Swag Labs, ACTUAL: Swag Labs
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:35 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Items not Empty, EXPECTED: true, ACTUAL: true
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:35 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Items Displayed in ascendingByPrice, EXPECTED: [7.99, 9.99, 15.99, 15.99, 29.99, 49.99], ACTUAL: [7.99, 9.99, 15.99, 15.99, 29.99, 49.99]
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="21"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">SORT008_testItemsDisplayedInAscendingOrderByPrice</p>
+            <p class="text-sm">
+              <span>3:32:35 PM</span> / <span>00:00:02:778</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">SORT008_testItemsDisplayedInAscendingOrderByPrice</h5>
+<span class='badge badge-success'>02.22.2025 3:32:35 PM</span>
+<span class='badge badge-danger'>02.22.2025 3:32:37 PM</span>
+<span class='badge badge-default'>00:00:02:778</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=21</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:35 PM</td>
+        <td>
+          Test: SORT008_testItemsDisplayedInAscendingOrderByPrice
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:37 PM</td>
+        <td>
+          VALIDATIONS FOR SORT008_testItemsDisplayedInAscendingOrderByPrice
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:37 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Page Title, EXPECTED: Swag Labs, ACTUAL: Swag Labs
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:37 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Items not Empty, EXPECTED: true, ACTUAL: true
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:32:37 PM</td>
+        <td>
+          FAILED VALIDATION FOR: Items Displayed in ascendingByPrice, EXPECTED: [7.99, 9.99, 15.99, 15.99, 29.99, 49.99], ACTUAL: [29.99, 9.99, 15.99, 49.99, 7.99, 15.99]
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="22"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">SORT009_testItemsDisplayedInAscendingOrderByPrice</p>
+            <p class="text-sm">
+              <span>3:32:38 PM</span> / <span>00:00:02:540</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">SORT009_testItemsDisplayedInAscendingOrderByPrice</h5>
+<span class='badge badge-success'>02.22.2025 3:32:38 PM</span>
+<span class='badge badge-danger'>02.22.2025 3:32:40 PM</span>
+<span class='badge badge-default'>00:00:02:540</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=22</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:38 PM</td>
+        <td>
+          Test: SORT009_testItemsDisplayedInAscendingOrderByPrice
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:40 PM</td>
+        <td>
+          VALIDATIONS FOR SORT009_testItemsDisplayedInAscendingOrderByPrice
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:40 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Page Title, EXPECTED: Swag Labs, ACTUAL: Swag Labs
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:40 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Items not Empty, EXPECTED: true, ACTUAL: true
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:32:40 PM</td>
+        <td>
+          FAILED VALIDATION FOR: Items Displayed in ascendingByPrice, EXPECTED: [7.99, 9.99, 15.99, 15.99, 29.99, 49.99], ACTUAL: [29.99, 9.99, 15.99, 49.99, 7.99, 15.99]
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="23"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">SORT010_testItemsDisplayedInDescendingOrderByPrice</p>
+            <p class="text-sm">
+              <span>3:32:40 PM</span> / <span>00:00:03:050</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">SORT010_testItemsDisplayedInDescendingOrderByPrice</h5>
+<span class='badge badge-success'>02.22.2025 3:32:40 PM</span>
+<span class='badge badge-danger'>02.22.2025 3:32:43 PM</span>
+<span class='badge badge-default'>00:00:03:050</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=23</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:40 PM</td>
+        <td>
+          Test: SORT010_testItemsDisplayedInDescendingOrderByPrice
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:43 PM</td>
+        <td>
+          VALIDATIONS FOR SORT010_testItemsDisplayedInDescendingOrderByPrice
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:43 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Page Title, EXPECTED: Swag Labs, ACTUAL: Swag Labs
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:43 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Items not Empty, EXPECTED: true, ACTUAL: true
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:43 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Items Displayed in descendingByPrice, EXPECTED: [49.99, 29.99, 15.99, 15.99, 9.99, 7.99], ACTUAL: [49.99, 29.99, 15.99, 15.99, 9.99, 7.99]
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="24"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">SORT011_testItemsDisplayedInDescendingOrderByPrice</p>
+            <p class="text-sm">
+              <span>3:32:43 PM</span> / <span>00:00:02:628</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">SORT011_testItemsDisplayedInDescendingOrderByPrice</h5>
+<span class='badge badge-success'>02.22.2025 3:32:43 PM</span>
+<span class='badge badge-danger'>02.22.2025 3:32:46 PM</span>
+<span class='badge badge-default'>00:00:02:628</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=24</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:43 PM</td>
+        <td>
+          Test: SORT011_testItemsDisplayedInDescendingOrderByPrice
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:46 PM</td>
+        <td>
+          VALIDATIONS FOR SORT011_testItemsDisplayedInDescendingOrderByPrice
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:46 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Page Title, EXPECTED: Swag Labs, ACTUAL: Swag Labs
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:46 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Items not Empty, EXPECTED: true, ACTUAL: true
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:32:46 PM</td>
+        <td>
+          FAILED VALIDATION FOR: Items Displayed in descendingByPrice, EXPECTED: [49.99, 29.99, 15.99, 15.99, 9.99, 7.99], ACTUAL: [29.99, 9.99, 15.99, 49.99, 7.99, 15.99]
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="25"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">SORT012_testItemsDisplayedInDescendingOrderByPrice</p>
+            <p class="text-sm">
+              <span>3:32:46 PM</span> / <span>00:00:02:695</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">SORT012_testItemsDisplayedInDescendingOrderByPrice</h5>
+<span class='badge badge-success'>02.22.2025 3:32:46 PM</span>
+<span class='badge badge-danger'>02.22.2025 3:32:49 PM</span>
+<span class='badge badge-default'>00:00:02:695</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=25</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:46 PM</td>
+        <td>
+          Test: SORT012_testItemsDisplayedInDescendingOrderByPrice
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:49 PM</td>
+        <td>
+          VALIDATIONS FOR SORT012_testItemsDisplayedInDescendingOrderByPrice
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:49 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Page Title, EXPECTED: Swag Labs, ACTUAL: Swag Labs
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:49 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Items not Empty, EXPECTED: true, ACTUAL: true
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:32:49 PM</td>
+        <td>
+          FAILED VALIDATION FOR: Items Displayed in descendingByPrice, EXPECTED: [49.99, 29.99, 15.99, 15.99, 9.99, 7.99], ACTUAL: [29.99, 9.99, 15.99, 49.99, 7.99, 15.99]
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="26"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">CART001_testAddingSingleItemToCardFromHomePage</p>
+            <p class="text-sm">
+              <span>3:32:49 PM</span> / <span>00:00:02:759</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">CART001_testAddingSingleItemToCardFromHomePage</h5>
+<span class='badge badge-success'>02.22.2025 3:32:49 PM</span>
+<span class='badge badge-danger'>02.22.2025 3:32:52 PM</span>
+<span class='badge badge-default'>00:00:02:759</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=26</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:49 PM</td>
+        <td>
+          Test: CART001_testAddingSingleItemToCardFromHomePage
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:52 PM</td>
+        <td>
+          VALIDATIONS FOR CART001_testAddingSingleItemToCardFromHomePage
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:52 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Page Title, EXPECTED: Swag Labs, ACTUAL: Swag Labs
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:52 PM</td>
+        <td>
+          PASSED VALIDATION FOR: No Of items in Cart, EXPECTED: 1, ACTUAL: 1
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:52 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item found in Cart, EXPECTED: null, ACTUAL: Item(name=Sauce Labs Bolt T-Shirt, description=Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt., price=15.99, quantity=1)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:52 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Name, EXPECTED: Sauce Labs Bolt T-Shirt, ACTUAL: Sauce Labs Bolt T-Shirt
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:52 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Price, EXPECTED: 15.99, ACTUAL: 15.99
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:52 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Description, EXPECTED: Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt., ACTUAL: Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="27"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">CART002_testAddingSingleItemToCardFromHomePage</p>
+            <p class="text-sm">
+              <span>3:32:52 PM</span> / <span>00:00:07:280</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">CART002_testAddingSingleItemToCardFromHomePage</h5>
+<span class='badge badge-success'>02.22.2025 3:32:52 PM</span>
+<span class='badge badge-danger'>02.22.2025 3:32:59 PM</span>
+<span class='badge badge-default'>00:00:07:280</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=27</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:52 PM</td>
+        <td>
+          Test: CART002_testAddingSingleItemToCardFromHomePage
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:59 PM</td>
+        <td>
+          VALIDATIONS FOR CART002_testAddingSingleItemToCardFromHomePage
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:59 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Page Title, EXPECTED: Swag Labs, ACTUAL: Swag Labs
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:32:59 PM</td>
+        <td>
+          FAILED VALIDATION FOR: No Of items in Cart, EXPECTED: 1, ACTUAL: 0
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="28"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">CART003_testAddingSingleItemToCardFromHomePage</p>
+            <p class="text-sm">
+              <span>3:32:59 PM</span> / <span>00:00:07:294</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">CART003_testAddingSingleItemToCardFromHomePage</h5>
+<span class='badge badge-success'>02.22.2025 3:32:59 PM</span>
+<span class='badge badge-danger'>02.22.2025 3:33:06 PM</span>
+<span class='badge badge-default'>00:00:07:294</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=28</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:59 PM</td>
+        <td>
+          Test: CART003_testAddingSingleItemToCardFromHomePage
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:33:06 PM</td>
+        <td>
+          VALIDATIONS FOR CART003_testAddingSingleItemToCardFromHomePage
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:06 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Page Title, EXPECTED: Swag Labs, ACTUAL: Swag Labs
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:33:06 PM</td>
+        <td>
+          FAILED VALIDATION FOR: No Of items in Cart, EXPECTED: 1, ACTUAL: 0
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="29"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">CART004_testAddingMultipleItemToCardFromHomePage</p>
+            <p class="text-sm">
+              <span>3:33:07 PM</span> / <span>00:00:02:966</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">CART004_testAddingMultipleItemToCardFromHomePage</h5>
+<span class='badge badge-success'>02.22.2025 3:33:07 PM</span>
+<span class='badge badge-danger'>02.22.2025 3:33:10 PM</span>
+<span class='badge badge-default'>00:00:02:966</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=29</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:33:07 PM</td>
+        <td>
+          Test: CART004_testAddingMultipleItemToCardFromHomePage
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:33:10 PM</td>
+        <td>
+          VALIDATIONS FOR CART004_testAddingMultipleItemToCardFromHomePage
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:10 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Page Title, EXPECTED: Swag Labs, ACTUAL: Swag Labs
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:10 PM</td>
+        <td>
+          PASSED VALIDATION FOR: No Of items in Cart, EXPECTED: 3, ACTUAL: 3
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:10 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item found in Cart, EXPECTED: null, ACTUAL: Item(name=Sauce Labs Bolt T-Shirt, description=Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt., price=15.99, quantity=1)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:10 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Name, EXPECTED: Sauce Labs Bolt T-Shirt, ACTUAL: Sauce Labs Bolt T-Shirt
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:10 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Price, EXPECTED: 15.99, ACTUAL: 15.99
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:10 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Description, EXPECTED: Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt., ACTUAL: Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:10 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item found in Cart, EXPECTED: null, ACTUAL: Item(name=Sauce Labs Bike Light, description=A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included., price=9.99, quantity=1)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:10 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Name, EXPECTED: Sauce Labs Bike Light, ACTUAL: Sauce Labs Bike Light
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:10 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Price, EXPECTED: 9.99, ACTUAL: 9.99
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:10 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Description, EXPECTED: A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included., ACTUAL: A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:10 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item found in Cart, EXPECTED: null, ACTUAL: Item(name=Sauce Labs Onesie, description=Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel., price=7.99, quantity=1)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:10 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Name, EXPECTED: Sauce Labs Onesie, ACTUAL: Sauce Labs Onesie
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:10 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Price, EXPECTED: 7.99, ACTUAL: 7.99
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:10 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Description, EXPECTED: Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel., ACTUAL: Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel.
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="30"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">CART005_testAddingMultipleItemToCardFromHomePage</p>
+            <p class="text-sm">
+              <span>3:33:10 PM</span> / <span>00:00:02:956</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">CART005_testAddingMultipleItemToCardFromHomePage</h5>
+<span class='badge badge-success'>02.22.2025 3:33:10 PM</span>
+<span class='badge badge-danger'>02.22.2025 3:33:13 PM</span>
+<span class='badge badge-default'>00:00:02:956</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=30</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:33:10 PM</td>
+        <td>
+          Test: CART005_testAddingMultipleItemToCardFromHomePage
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:33:13 PM</td>
+        <td>
+          VALIDATIONS FOR CART005_testAddingMultipleItemToCardFromHomePage
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:13 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Page Title, EXPECTED: Swag Labs, ACTUAL: Swag Labs
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:33:13 PM</td>
+        <td>
+          FAILED VALIDATION FOR: No Of items in Cart, EXPECTED: 3, ACTUAL: 2
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="31"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">CART006_testAddingMultipleItemToCardFromHomePage</p>
+            <p class="text-sm">
+              <span>3:33:13 PM</span> / <span>00:00:02:891</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">CART006_testAddingMultipleItemToCardFromHomePage</h5>
+<span class='badge badge-success'>02.22.2025 3:33:13 PM</span>
+<span class='badge badge-danger'>02.22.2025 3:33:16 PM</span>
+<span class='badge badge-default'>00:00:02:891</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=31</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:33:13 PM</td>
+        <td>
+          Test: CART006_testAddingMultipleItemToCardFromHomePage
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:33:16 PM</td>
+        <td>
+          VALIDATIONS FOR CART006_testAddingMultipleItemToCardFromHomePage
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:16 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Page Title, EXPECTED: Swag Labs, ACTUAL: Swag Labs
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:33:16 PM</td>
+        <td>
+          FAILED VALIDATION FOR: No Of items in Cart, EXPECTED: 3, ACTUAL: 2
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="32"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">CART007_testRemovingSingleItemFromCartFromHomepage</p>
+            <p class="text-sm">
+              <span>3:33:16 PM</span> / <span>00:00:07:635</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">CART007_testRemovingSingleItemFromCartFromHomepage</h5>
+<span class='badge badge-success'>02.22.2025 3:33:16 PM</span>
+<span class='badge badge-danger'>02.22.2025 3:33:23 PM</span>
+<span class='badge badge-default'>00:00:07:635</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=32</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:33:16 PM</td>
+        <td>
+          Test: CART007_testRemovingSingleItemFromCartFromHomepage
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:33:23 PM</td>
+        <td>
+          VALIDATIONS FOR CART007_testRemovingSingleItemFromCartFromHomepage
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:23 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Page Title, EXPECTED: Swag Labs, ACTUAL: Swag Labs
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:23 PM</td>
+        <td>
+          PASSED VALIDATION FOR: No Of items in Cart, EXPECTED: 1, ACTUAL: 1
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:23 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item found in Cart, EXPECTED: null, ACTUAL: Item(name=Sauce Labs Bolt T-Shirt, description=Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt., price=15.99, quantity=1)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:23 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Name, EXPECTED: Sauce Labs Bolt T-Shirt, ACTUAL: Sauce Labs Bolt T-Shirt
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:23 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Price, EXPECTED: 15.99, ACTUAL: 15.99
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:23 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Description, EXPECTED: Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt., ACTUAL: Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:23 PM</td>
+        <td>
+          PASSED VALIDATION FOR: No Of items in Cart, EXPECTED: 0, ACTUAL: 0
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="33"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">CART008_testRemovingMultipleItemsFromCartFromHomepage</p>
+            <p class="text-sm">
+              <span>3:33:23 PM</span> / <span>00:00:08:598</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">CART008_testRemovingMultipleItemsFromCartFromHomepage</h5>
+<span class='badge badge-success'>02.22.2025 3:33:23 PM</span>
+<span class='badge badge-danger'>02.22.2025 3:33:32 PM</span>
+<span class='badge badge-default'>00:00:08:598</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=33</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:33:23 PM</td>
+        <td>
+          Test: CART008_testRemovingMultipleItemsFromCartFromHomepage
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:33:32 PM</td>
+        <td>
+          VALIDATIONS FOR CART008_testRemovingMultipleItemsFromCartFromHomepage
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:32 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Page Title, EXPECTED: Swag Labs, ACTUAL: Swag Labs
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:32 PM</td>
+        <td>
+          PASSED VALIDATION FOR: No Of items in Cart, EXPECTED: 3, ACTUAL: 3
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:32 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item found in Cart, EXPECTED: null, ACTUAL: Item(name=Sauce Labs Bolt T-Shirt, description=Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt., price=15.99, quantity=1)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:32 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Name, EXPECTED: Sauce Labs Bolt T-Shirt, ACTUAL: Sauce Labs Bolt T-Shirt
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:32 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Price, EXPECTED: 15.99, ACTUAL: 15.99
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:32 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Description, EXPECTED: Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt., ACTUAL: Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:32 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item found in Cart, EXPECTED: null, ACTUAL: Item(name=Sauce Labs Fleece Jacket, description=It's not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office., price=49.99, quantity=1)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:32 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Name, EXPECTED: Sauce Labs Fleece Jacket, ACTUAL: Sauce Labs Fleece Jacket
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:32 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Price, EXPECTED: 49.99, ACTUAL: 49.99
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:32 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Description, EXPECTED: It's not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office., ACTUAL: It's not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:32 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item found in Cart, EXPECTED: null, ACTUAL: Item(name=Sauce Labs Onesie, description=Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel., price=7.99, quantity=1)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:32 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Name, EXPECTED: Sauce Labs Onesie, ACTUAL: Sauce Labs Onesie
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:32 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Price, EXPECTED: 7.99, ACTUAL: 7.99
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:32 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Description, EXPECTED: Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel., ACTUAL: Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:32 PM</td>
+        <td>
+          PASSED VALIDATION FOR: No Of items in Cart, EXPECTED: 0, ACTUAL: 0
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="34"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">CART009_testRemovingMultipleItemsFromCartFromHomepage</p>
+            <p class="text-sm">
+              <span>3:33:32 PM</span> / <span>00:00:03:822</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">CART009_testRemovingMultipleItemsFromCartFromHomepage</h5>
+<span class='badge badge-success'>02.22.2025 3:33:32 PM</span>
+<span class='badge badge-danger'>02.22.2025 3:33:36 PM</span>
+<span class='badge badge-default'>00:00:03:822</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=34</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:33:32 PM</td>
+        <td>
+          Test: CART009_testRemovingMultipleItemsFromCartFromHomepage
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:33:36 PM</td>
+        <td>
+          VALIDATIONS FOR CART009_testRemovingMultipleItemsFromCartFromHomepage
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:36 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Page Title, EXPECTED: Swag Labs, ACTUAL: Swag Labs
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:36 PM</td>
+        <td>
+          PASSED VALIDATION FOR: No Of items in Cart, EXPECTED: 3, ACTUAL: 3
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:36 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item found in Cart, EXPECTED: null, ACTUAL: Item(name=Sauce Labs Bolt T-Shirt, description=Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt., price=15.99, quantity=1)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:36 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Name, EXPECTED: Sauce Labs Bolt T-Shirt, ACTUAL: Sauce Labs Bolt T-Shirt
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:36 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Price, EXPECTED: 15.99, ACTUAL: 15.99
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:36 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Description, EXPECTED: Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt., ACTUAL: Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:36 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item found in Cart, EXPECTED: null, ACTUAL: Item(name=Sauce Labs Fleece Jacket, description=It's not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office., price=49.99, quantity=1)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:36 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Name, EXPECTED: Sauce Labs Fleece Jacket, ACTUAL: Sauce Labs Fleece Jacket
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:36 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Price, EXPECTED: 49.99, ACTUAL: 49.99
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:36 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Description, EXPECTED: It's not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office., ACTUAL: It's not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:36 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item found in Cart, EXPECTED: null, ACTUAL: Item(name=Sauce Labs Onesie, description=Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel., price=7.99, quantity=1)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:36 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Name, EXPECTED: Sauce Labs Onesie, ACTUAL: Sauce Labs Onesie
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:36 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Price, EXPECTED: 7.99, ACTUAL: 7.99
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:36 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Description, EXPECTED: Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel., ACTUAL: Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:36 PM</td>
+        <td>
+          PASSED VALIDATION FOR: No Of items in Cart, EXPECTED: 1, ACTUAL: 1
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:36 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item found in Cart, EXPECTED: null, ACTUAL: Item(name=Sauce Labs Fleece Jacket, description=It's not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office., price=49.99, quantity=1)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:36 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Name, EXPECTED: Sauce Labs Fleece Jacket, ACTUAL: Sauce Labs Fleece Jacket
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:36 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Price, EXPECTED: 49.99, ACTUAL: 49.99
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:36 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Description, EXPECTED: It's not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office., ACTUAL: It's not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office.
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="35"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">ORDER001_verifyOderFlowForSingleItem</p>
+            <p class="text-sm">
+              <span>3:33:36 PM</span> / <span>00:00:03:208</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">ORDER001_verifyOderFlowForSingleItem</h5>
+<span class='badge badge-success'>02.22.2025 3:33:36 PM</span>
+<span class='badge badge-danger'>02.22.2025 3:33:39 PM</span>
+<span class='badge badge-default'>00:00:03:208</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=35</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:33:36 PM</td>
+        <td>
+          Test: ORDER001_verifyOderFlowForSingleItem
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:33:39 PM</td>
+        <td>
+          VALIDATIONS FOR ORDER001_verifyOderFlowForSingleItem
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:39 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Page Title, EXPECTED: Swag Labs, ACTUAL: Swag Labs
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:39 PM</td>
+        <td>
+          PASSED VALIDATION FOR: No Of items in Cart, EXPECTED: 1, ACTUAL: 1
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:39 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item found in Cart, EXPECTED: null, ACTUAL: Item(name=Sauce Labs Bolt T-Shirt, description=Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt., price=15.99, quantity=1)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:39 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Name, EXPECTED: Sauce Labs Bolt T-Shirt, ACTUAL: Sauce Labs Bolt T-Shirt
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:39 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Price, EXPECTED: 15.99, ACTUAL: 15.99
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:39 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Description, EXPECTED: Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt., ACTUAL: Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:39 PM</td>
+        <td>
+          PASSED VALIDATION FOR: No of Items in Overview Page, EXPECTED: 1, ACTUAL: 1
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:39 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item found in Cart, EXPECTED: null, ACTUAL: Item(name=Sauce Labs Bolt T-Shirt, description=Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt., price=15.99, quantity=1)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:39 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Name, EXPECTED: Sauce Labs Bolt T-Shirt, ACTUAL: Sauce Labs Bolt T-Shirt
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:39 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Price, EXPECTED: 15.99, ACTUAL: 15.99
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:39 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Description, EXPECTED: Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt., ACTUAL: Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:39 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Total Amount, EXPECTED: 15.99, ACTUAL: 15.99
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:39 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Tax amount is not zero, EXPECTED: true, ACTUAL: true
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:39 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Total Amount, EXPECTED: 17.27, ACTUAL: 17.27
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:39 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Order Confirmation Header, EXPECTED: Thank you for your order!, ACTUAL: Thank you for your order!
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:39 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Order Confirmation Text, EXPECTED: Your order has been dispatched, and will arrive just as fast as the pony can get there!, ACTUAL: Your order has been dispatched, and will arrive just as fast as the pony can get there!
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="36"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">ORDER002_verifyOderFlowForSingleItem</p>
+            <p class="text-sm">
+              <span>3:33:39 PM</span> / <span>00:00:04:116</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">ORDER002_verifyOderFlowForSingleItem</h5>
+<span class='badge badge-success'>02.22.2025 3:33:39 PM</span>
+<span class='badge badge-danger'>02.22.2025 3:33:43 PM</span>
+<span class='badge badge-default'>00:00:04:116</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=36</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:33:39 PM</td>
+        <td>
+          Test: ORDER002_verifyOderFlowForSingleItem
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:33:43 PM</td>
+        <td>
+          VALIDATIONS FOR ORDER002_verifyOderFlowForSingleItem
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:43 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Page Title, EXPECTED: Swag Labs, ACTUAL: Swag Labs
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:43 PM</td>
+        <td>
+          PASSED VALIDATION FOR: No Of items in Cart, EXPECTED: 3, ACTUAL: 3
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:43 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item found in Cart, EXPECTED: null, ACTUAL: Item(name=Sauce Labs Bolt T-Shirt, description=Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt., price=15.99, quantity=1)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:43 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Name, EXPECTED: Sauce Labs Bolt T-Shirt, ACTUAL: Sauce Labs Bolt T-Shirt
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:43 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Price, EXPECTED: 15.99, ACTUAL: 15.99
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:43 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Description, EXPECTED: Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt., ACTUAL: Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:43 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item found in Cart, EXPECTED: null, ACTUAL: Item(name=Sauce Labs Fleece Jacket, description=It's not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office., price=49.99, quantity=1)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:43 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Name, EXPECTED: Sauce Labs Fleece Jacket, ACTUAL: Sauce Labs Fleece Jacket
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:43 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Price, EXPECTED: 49.99, ACTUAL: 49.99
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:43 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Description, EXPECTED: It's not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office., ACTUAL: It's not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:43 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item found in Cart, EXPECTED: null, ACTUAL: Item(name=Sauce Labs Onesie, description=Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel., price=7.99, quantity=1)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:43 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Name, EXPECTED: Sauce Labs Onesie, ACTUAL: Sauce Labs Onesie
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:43 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Price, EXPECTED: 7.99, ACTUAL: 7.99
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:43 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Description, EXPECTED: Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel., ACTUAL: Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:43 PM</td>
+        <td>
+          PASSED VALIDATION FOR: No of Items in Overview Page, EXPECTED: 3, ACTUAL: 3
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:43 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item found in Cart, EXPECTED: null, ACTUAL: Item(name=Sauce Labs Bolt T-Shirt, description=Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt., price=15.99, quantity=1)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:43 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Name, EXPECTED: Sauce Labs Bolt T-Shirt, ACTUAL: Sauce Labs Bolt T-Shirt
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:43 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Price, EXPECTED: 15.99, ACTUAL: 15.99
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:43 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Description, EXPECTED: Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt., ACTUAL: Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:43 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item found in Cart, EXPECTED: null, ACTUAL: Item(name=Sauce Labs Fleece Jacket, description=It's not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office., price=49.99, quantity=1)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:43 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Name, EXPECTED: Sauce Labs Fleece Jacket, ACTUAL: Sauce Labs Fleece Jacket
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:43 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Price, EXPECTED: 49.99, ACTUAL: 49.99
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:43 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Description, EXPECTED: It's not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office., ACTUAL: It's not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:43 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item found in Cart, EXPECTED: null, ACTUAL: Item(name=Sauce Labs Onesie, description=Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel., price=7.99, quantity=1)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:43 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Name, EXPECTED: Sauce Labs Onesie, ACTUAL: Sauce Labs Onesie
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:43 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Price, EXPECTED: 7.99, ACTUAL: 7.99
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:43 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Description, EXPECTED: Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel., ACTUAL: Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:43 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Item Total Amount, EXPECTED: 73.97, ACTUAL: 73.97
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:43 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Tax amount is not zero, EXPECTED: true, ACTUAL: true
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:43 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Total Amount, EXPECTED: 79.89, ACTUAL: 79.89
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:43 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Order Confirmation Header, EXPECTED: Thank you for your order!, ACTUAL: Thank you for your order!
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:43 PM</td>
+        <td>
+          PASSED VALIDATION FOR: Order Confirmation Text, EXPECTED: Your order has been dispatched, and will arrive just as fast as the pony can get there!, ACTUAL: Your order has been dispatched, and will arrive just as fast as the pony can get there!
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>22-02-2025 15:31:36</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>22-02-2025 15:33:44</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Tests Passed</p>
+<h3>22</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Tests Failed</p>
+<h3>14</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Tests</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='61%'>
+<b>22</b> tests passed
+</small>
+</div>
+<div>
+<small data-tooltip='38%'><b>14</b> tests failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Log events</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='events-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='66%'><b>195</b> events passed</small></div>
+<div>
+<small data-tooltip='8%'><b>26</b> events failed,
+<b data-tooltip='%'>72</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"LOGIN01_testStandardUserLogin":3.321,"LOGIN02_testInvalidUserLogin":2.252,"LOGIN03_testLockedUserLogin":2.515,"LOGIN04_testProblemUserLogin":2.045,"LOGIN04_testVisualUserLogin":2.185,"LOGIN05_testPerformanceGlitchUserLogin":7.243,"LOGIN06_testErrorUserLogin":1.858,"ITEM001_testSingleItemDetails":2.46,"ITEM002_testSingleItemDetails":2.637,"ITEM003_testSingleItemDetails":2.623,"ITEM004_testMultipleItemDetails":3.202,"ITEM005_testMultipleItemDetails":2.865,"ITEM006_testMultipleItemDetails":3.034,"SORT001_testItemsDisplayedInAscendingOrderByName":2.483,"SORT002_testItemsDisplayedInAscendingOrderByName":2.545,"SORT003_testItemsDisplayedInAscendingOrderByName":2.543,"SORT004_testItemsDisplayedInDescendingOrderByName":2.653,"SORT005_testItemsDisplayedInDescendingOrderByName":2.551,"SORT006_testItemsDisplayedInDescendingOrderByName":2.771,"SORT007_testItemsDisplayedInAscendingOrderByPrice":2.439,"SORT008_testItemsDisplayedInAscendingOrderByPrice":2.778,"SORT009_testItemsDisplayedInAscendingOrderByPrice":2.54,"SORT010_testItemsDisplayedInDescendingOrderByPrice":3.05,"SORT011_testItemsDisplayedInDescendingOrderByPrice":2.628,"SORT012_testItemsDisplayedInDescendingOrderByPrice":2.695,"CART001_testAddingSingleItemToCardFromHomePage":2.759,"CART002_testAddingSingleItemToCardFromHomePage":7.28,"CART003_testAddingSingleItemToCardFromHomePage":7.294,"CART004_testAddingMultipleItemToCardFromHomePage":2.966,"CART005_testAddingMultipleItemToCardFromHomePage":2.956,"CART006_testAddingMultipleItemToCardFromHomePage":2.891,"CART007_testRemovingSingleItemFromCartFromHomepage":7.635,"CART008_testRemovingMultipleItemsFromCartFromHomepage":8.598,"CART009_testRemovingMultipleItemsFromCartFromHomepage":3.822,"ORDER001_verifyOderFlowForSingleItem":3.208,"ORDER002_verifyOderFlowForSingleItem":4.116
+};
+</script>
+<div class="row">
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 22,
+failParent: 14,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 0,
+failChild: 0,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 0,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+passEvents: 195,
+failEvents: 26,
+warningEvents: 0,
+skipEvents: 0,
+infoEvents: 72
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>
